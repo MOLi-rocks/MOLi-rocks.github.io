@@ -1,0 +1,47 @@
+main header {
+  margin-top: 50px;
+  text-align: center;
+}
+main header h1 {
+  font-size: 44px;
+  margin-bottom: 3px;
+}
+main header h2 {
+  font-size: 30px;
+  margin: 0 0 40px;
+}
+
+.iconlist {
+  float: left;
+  margin: 3.5px;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 300px;
+}
+
+#site-title {
+  font-size: 4.5em;
+  letter-spacing: -3px;
+  margin: 0px 0px 0.15em;
+  transition: font-size 0s ease 0s, letter-spacing 0.5s ease-out 0s;
+}
+
+#site-description {
+  font-size: 1.5em;
+}
+
+#banner {
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  padding: 0px;  
+  background: rgba(0,0,0,0.4) center center url(../img/background.JPG);
+  background-size: cover;
+}
+
+#banner .hgroup {
+  padding: 70px;  
+  background-color: rgba(255, 255, 255, 0.65);
+}
