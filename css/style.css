@@ -34,6 +34,14 @@ section {
   font-size: 17px;
 }
 
+/* JustFont 處理成功或失敗，都以漸變顯示 */
+.jf-active *, .jf-inactive * {
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
 #menu {
   background-color: rgba(255,255,255,0.75);
 }
