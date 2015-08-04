@@ -5,11 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="Wang-Mao-Lin">
-		<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.css">
+		<link rel="stylesheet" href="http://oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.css">
 		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
 		<!-- style -->
 		<link href="css/style.css" rel="stylesheet">
 		<title>MOLi.Rocks</title>
+		<!-- Google Analytics Code -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-65940060-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
 	</head>
 	<body>
 		<!-- Menu -->
@@ -202,16 +213,20 @@
 							</p>
 							<div class="ui horizontal list">
 								<div class="iconlist">
-									<h2 class="ui icon header">
-									<i class="send icon circular"></i>
-										<span><a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">Telegram</a></span>
-									</h2>
+									<a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">
+										<h2 class="ui icon header">
+										<i class="send icon circular"></i>
+											<span>Telegram</span>
+										</h2>
+									</a>
 								</div>
 								<div class="iconlist">
-									<h2 class="ui icon header">
-									<i class="facebook icon circular"></i>
-										<span><a href="https://www.facebook.com/MOLi.rocks" target="_blank" titile ="MOLi_Facebook">Facebook</a></span>
-									</h2>
+									<a href="https://www.facebook.com/MOLi.rocks" target="_blank" titile ="MOLi_Facebook">
+										<h2 class="ui icon header">
+										<i class="facebook icon circular"></i>
+											<span>Facebook</span>
+										</h2>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -419,7 +434,7 @@
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="//oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
+		<script src="http://oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script src="js/ddscrollspy.js "></script>
 		<!-- Emebed map with Leaflet & OpenStreetMap -->
@@ -437,23 +452,11 @@
 			marker.bindPopup("MOLi 在這裡!").openPopup();
 			// Disable drag and zoom handlers.
 			map.dragging.disable();
-			map.doubleClickZoom.disable();
 			map.scrollWheelZoom.disable();
 			map.boxZoom.disable();
 			map.keyboard.disable();
 			// Disable tap handler, if present.
 			if (map.tap) map.tap.disable();
-		</script>
-		<!-- Google Analytics Code -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-65940060-1', 'auto');
-			ga('send', 'pageview');
-
 		</script>
 		<script>
 			$('#menu').ddscrollSpy({
