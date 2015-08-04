@@ -14,7 +14,7 @@
 		<!-- Menu -->
 		<div id="menu" class="ui secondary pointing invert fixed menu">
 			<div class="ui container">
-				<a class="active item" href="#">Home</a>
+				<a href="#menu" class="item">Home</a>
 				<a href="#intro" class="item">Intro</a>
 				<a href="#happyhour" class="item">HappyHour</a>
 				<a href="#host" class="item">Host</a>
@@ -299,6 +299,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="//oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="js/ddscrollspy.js "></script>
 		<script>
 			function initialize() {
 				var mapCanvas = document.getElementById('map-canvas');
@@ -327,6 +328,12 @@
 			ga('create', 'UA-65940060-1', 'auto');
 			ga('send', 'pageview');
 
+		</script>
+		<script>
+			$('#menu').ddscrollSpy({
+				scrolltopoffset: -40,
+				highlightclass: "active"
+			});
 		</script>
 	</body>
 </html>
