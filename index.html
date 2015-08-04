@@ -8,17 +8,18 @@
 		<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.css">
 		<!-- style -->
 		<link href="css/style.css" rel="stylesheet">
-		<title>MOLi.Rock</title>
+		<title>MOLi.Rocks</title>
 	</head>
 	<body>
-		<div class="ui page grid">
-			<div class="column">
-				<div class="ui secondary pointing menu">
-					<a class="logo item">startup</a>
-					<a class="active item"><i class="flaticon-home"></i>Home</a> 
-					<a class="item"><i class="flaticon-mail"></i>Messages</a>
-					<a class="item"><i class="flaticon-heart"></i>Friends</a>
-				</div>
+		<!-- Menu -->
+		<div id="menu" class="ui secondary pointing invert fixed menu">
+			<div class="ui container">
+				<a class="active item" href="#">Home</a>
+				<a href="#intro" class="item">Intro</a>
+				<a href="#happyhour" class="item">HappyHour</a>
+				<a href="#host" class="item">Host</a>
+				<a href="#keyholders" class="item">Keyholders</a>
+				<a href="#about" class="item">About</a>
 			</div>
 		</div>
 		<section id="banner">
@@ -26,8 +27,8 @@
 				<div class="ui grid container stackable center aligned">
 					<div class="ui vertical segment center aligned">
 						<h1 id="site-title" class="ui huge header">創新自造者開放實驗室</h1>
+						<h3 id="site-description" class="ui sub header"><i>Makers' Open Lab for Innovation</i></h3>	
 						<h2 id="site-description" class="ui sub header"><i>We Make, We Hack, We Share.</i></h2>	
-						<h2 id="site-description" class="ui sub header"><i>Makers' Open Lab for Innovation</i></h2>	
 					</div>
 				</div>
 			</header>
@@ -37,67 +38,71 @@
 				<header>
 					<div class="ui grid container stackable center aligned">
 						<div class="ui vertical segment center aligned">
-							<h1>開放空間、開放研究室、開放教學</h1>
+							<h1>MOLi 開放空間、開放研究室、開放教學</h1>
 						</div>
 					</div>
 				</header>
-				<div class="ui grid container stackable">
-					<div class="ui eight wide column grid">
-						<div class="ui vertical segment">
-							<h2>場地提供</h2>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="book icon circular"></i>
-									<span>程式用書</span>
-								</h2>
-							</div>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="lab icon circular"></i>
-									<span>研究精神</span>
-								</h2>
-							</div>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="heart icon circular"></i>
-									<span>開放熱情</span>
-								</h2>
-							</div>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="wifi icon circular"></i>
-									<span>高速<s>問題</s>無線網路</span>
-								</h2>
-							</div>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="print icon circular"></i>
-									<span>3D印表機</span>
-								</h2>
-							</div>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="female icon circular"></i>
-									<span>程序員鼓勵師</span>
-								</h2>
-							</div>
+				<div class="ui grid container stackable center aligned">
+					<div class="ui vertical segment center aligned">
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="lab icon circular"></i>
+								<span>研究精神</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="heart icon circular"></i>
+								<span>開放熱情</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="wifi icon circular"></i>
+								<span>高速網路</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="female icon circular"></i>
+								<span>程序員鼓勵師</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="book icon circular"></i>
+								<span>資訊用書</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="print icon circular"></i>
+								<span>3D列印/建模</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="plug icon circular"></i>
+								<span>休息處所</span>
+							</h2>
+						</div>
+						<div class="iconlist">
+							<h2 class="ui icon header">
+							<i class="sound icon circular"></i>
+								<span>視聽饗宴</span>
+							</h2>
 						</div>
 					</div>
-					<div class="ui eight wide column grid">
-						<div class="ui vertical segment">
-							<h2>地圖</h2>
-							<div id="map-canvas"></div>
-							<p>地址：南投縣埔里鎮大學路470號管理學院R237</p>
-							<p>Address：Room 237 in Management Building, in Nationl Chi-Nan University.</p>
-						</div>
+					<div>
+						<img src="https://lh3.googleusercontent.com/uSEiuvM0FFQIKk3UUUE-GvDzU0anCo4JbJi5rhD6QIU_=w1280-h378-no">
 					</div>
 				</div>
 			</section>
-			<section id="schedule">
+			<section id="happyhour">
 				<header>
 					<div class="ui grid container stackable center aligned">
 						<div class="ui vertical segment center aligned">
-							<h1>開放時間、活動</h1>
+							<h1>HappyHour</h1>
 							<h2>Opening Hours & Schedule</h2>
 						</div>
 					</div>
@@ -105,37 +110,49 @@
 				<div class="ui grid container stackable">
 					<div class="ui eight wide column grid">
 						<div class="ui vertical segment">
-							<p>原則上，每天 24hrs 皆對全體 MOLi 成員開放。</p>
-							<p>如果你不確定有沒有人在，可以我們的 Telegram 群組上面問一下。</p>
+							<img class="ui medium centered rounded image" src="img/Yuer1.gif">
 						</div>
 					</div>
 					<div class="ui eight wide column grid">
-						<div class="ui vertical segment">
-						<img src="http://placehold.it/400x300&text=consectetur">
+						<div class="ui vertical segment center aligned">
+							<p>原則上，每天 24hrs 皆對全體 MOLi 成員開放。</p>
+							<p>如果你不確定有沒有人在，可以我們的群組上面問一下。</p>
+							<div class="iconlist">
+								<h2 class="ui icon header">
+								<i class="send icon circular"></i>
+									<span><a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">Telegram</a></span>
+								</h2>
+							</div>
+							<div class="iconlist">
+								<h2 class="ui icon header">
+								<i class="facebook icon circular"></i>
+									<span><a href="https://www.facebook.com/MOLi.rocks" target="_blank" titile ="MOLi_Facebook">Facebook</a></span>
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="event">
+			<section id="host">
 				<header>
 					<div class="ui grid container stackable center aligned">
 						<div class="ui vertical segment center aligned">
-							<h1>歡迎到MOLi辦活動</h1>
+							<h1>舉辦活動</h1>
 							<h2>Host an Event Here</h2>
 						</div>
 					</div>
 				</header>
-				<div class="ui grid container stackable">
+				<div class="ui grid container stackable center aligned">
 					<div class="column">
 						<div class="ui vertical segment">
 							<div class="ui center aligned">
-								<div class="ui medium images">
-									<img src="http://placehold.it/400x300&text=id">
-									<img src="http://placehold.it/400x300&text=molestias">
-									<img src="http://placehold.it/400x300&text=nesciunt">
+								<div class="ui medium rounded images">
+									<img src="https://lh3.googleusercontent.com/VvfFURMMRKCc33qbmFpEuAgI6osjEpIMkIQy6N95YVJs=w1234-h925-no">
+									<img src="https://lh3.googleusercontent.com/ODb4QvTPE8fgrZlJhkWxQjo6YQGcFFMBbc0BQMG4b8ER=w1234-h925-no">
+									<img src="https://lh3.googleusercontent.com/hnerb1eapULIX-8rq6-Nr4-i1QtoglI7FYZK8BSm_rt-=w1234-h925-no">
 								</div>
 							</div>
-							<p>本場地座位約可容納 20 人、站位或無桌椅則可達 30 人以上。</p>
+							<p>本場地座位約可容納 15 人、站位則可達 30 人左右。</p>
 							<p></p>
 						</div>
 					</div>
@@ -146,7 +163,6 @@
 					<div class="ui grid container stackable center aligned">
 						<div class="ui vertical segment center aligned">
 							<h1>現任 Keyholders</h1>
-							<h2>Keyholders</h2>
 						</div>
 					</div>
 				</header>
@@ -155,27 +171,27 @@
 						<div class="column">
 							<div class="ui fluid card">
 								<div class="image">
-									<img src="http://placehold.it/400x300&text=consectetur">
+									<img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
 								</div>
 								<div class="content">
-									<a class="header">蛋蛋</a>
+									<a class="header">老俞</a>
 								</div>
 							</div>
 						</div>
 						<div class="column">
 							<div class="ui fluid card">
 								<div class="image">
-									<img src="http://placehold.it/400x300&text=consectetur">
+									<img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
 								</div>
 								<div class="content">
-									<a class="header">悅悅</a>
+									<a class="header">BlueT</a>
 								</div>
 							</div>
 						</div>					
 						<div class="column">
 							<div class="ui fluid card">
 								<div class="image">
-									<img src="http://placehold.it/400x300&text=consectetur">
+									<img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
 								</div>
 								<div class="content">
 									<a class="header">天天</a>
@@ -185,17 +201,7 @@
 						<div class="column">
 							<div class="ui fluid card">
 								<div class="image">
-									<img src="http://placehold.it/400x300&text=consectetur">
-								</div>
-								<div class="content">
-									<a class="header">蛋蛋</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://placehold.it/400x300&text=consectetur">
+									<img src="http://semantic-ui.com/images/avatar/large/daniel.jpg">
 								</div>
 								<div class="content">
 									<a class="header">悅悅</a>
@@ -205,10 +211,40 @@
 						<div class="column">
 							<div class="ui fluid card">
 								<div class="image">
-									<img src="http://placehold.it/400x300&text=consectetur">
+									<img src="http://semantic-ui.com/images/avatar/large/steve.jpg">
 								</div>
 								<div class="content">
-									<a class="header">天天</a>
+									<a class="header">茂林</a>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="ui fluid card">
+								<div class="image">
+									<img src="http://semantic-ui.com/images/avatar2/large/elyse.png">
+								</div>
+								<div class="content">
+									<a class="header">nhss</a>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="ui fluid card">
+								<div class="image">
+									<img src="http://semantic-ui.com/images/avatar/large/veronika.jpg">
+								</div>
+								<div class="content">
+									<a class="header">乃嘉</a>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="ui fluid card">
+								<div class="image">
+									<img src="http://semantic-ui.com/images/avatar/large/stevie.jpg">
+								</div>
+								<div class="content">
+									<a class="header">小青</a>
 								</div>
 							</div>
 						</div>
@@ -227,7 +263,9 @@
 				<div class="ui grid container stackable">
 					<div class="ui eight wide column grid">
 						<div class="ui vertical segment">
-							<p></p>
+							<div class="ui center aligned" id="map-canvas"></div>
+							<p>地址：南投縣埔里鎮大學路470號管理學院R237</p>
+							<p>Address：Room 237 in Management Building, in Nationl Chi-Nan University.</p>
 						</div>
 					</div>
 					<div class="ui eight wide column grid">
@@ -238,14 +276,23 @@
 							<p>We wish to build a different kind of lab, a new lab which required equipments for Self-Making people.</p>
 							<p>At least we'll prepare PCB boards, 3D Printer, Resistors, and things you might need.</p>
 							<p>We're building it, please join us and let's work on it together.</p>
+							<a href="http://MOLi.rocks"><i class="home icon circular"></i></a>
+							<a href="https://www.facebook.com/MOLi.rocks"><i class="facebook square icon circular"></i></a>
+							<a href="https://www.facebook.com/groups/MOLi.rocks/"><i class="facebook icon circular"></i></a>
+							<a href="https://github.com/MOLi-rocks"><i class="github icon circular"></i></a>
+							<a href="https://moli.hackpad.com"><i class="file text icon circular"></i></a>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 		<footer id="footer">
-			<div class="ui grid center aligned">
-				<p>&copy; MOLi.Rock 2015</p>
+			<div class="ui vertical segment">
+				<div class="ui center aligned container">
+					<p>&copy; MOLi.Rocks 2015</p>
+					<div class="ui horizontal small link list">
+						<a class="item" href="#happyhour">Contact Us</a>
+				</div>
 			</div>
 		</footer>
 
@@ -255,10 +302,10 @@
 		<script>
 			function initialize() {
 				var mapCanvas = document.getElementById('map-canvas');
-				var location = new google.maps.LatLng(23.9519099,120.9277187)
+				var location = new google.maps.LatLng(23.951942, 120.927427)
 				var mapOptions = {
 					center: location,
-					zoom: 15,
+					zoom: 17,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				}
 				var map = new google.maps.Map(mapCanvas, mapOptions)
