@@ -6,6 +6,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="Wang-Mao-Lin">
 		<link rel="stylesheet" href="//oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
 		<!-- style -->
 		<link href="css/style.css" rel="stylesheet">
 		<title>MOLi.Rocks</title>
@@ -314,7 +315,7 @@
 				<div class="ui grid container stackable">
 					<div class="ui eight wide column grid">
 						<div class="ui vertical segment">
-							<div class="ui center aligned" id="map-canvas"></div>
+							<div class="ui center aligned" id="map"></div>
 							<p>地址：南投縣埔里鎮大學路470號管理學院R237</p>
 							<p>Address：Room 237 in Management Building, in Nationl Chi-Nan University.</p>
 						</div>
@@ -355,25 +356,29 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="//oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script src="js/ddscrollspy.js "></script>
+		<!-- Emebed map with Leaflet & OpenStreetMap -->
 		<script>
-			function initialize() {
-				var mapCanvas = document.getElementById('map-canvas');
-				var location = new google.maps.LatLng(23.951942, 120.927427)
-				var mapOptions = {
-					center: location,
-					zoom: 17,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				}
-				var map = new google.maps.Map(mapCanvas, mapOptions)
-				var marker = new google.maps.Marker({
-					position: location,
-					title: "MOLi",
-					map: map
-				});
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
+			// initialize the map and maker
+			var map = L.map('map').setView([23.9519631, 120.9274402], 17);
+			var marker = L.marker([23.9519631, 120.9274402]);
+			// load a tile layer
+			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+				{
+					attribution: '地圖資訊 © <a href="http://openstreetmap.org">OpenStreetMap 貢獻者</a> ♥',
+				}).addTo(map);
+			// load marker
+			marker.addTo(map);
+			marker.bindPopup("MOLi 在這裡!").openPopup();
+			// Disable drag and zoom handlers.
+			map.dragging.disable();
+			map.doubleClickZoom.disable();
+			map.scrollWheelZoom.disable();
+			map.boxZoom.disable();
+			map.keyboard.disable();
+			// Disable tap handler, if present.
+			if (map.tap) map.tap.disable();
 		</script>
 		<!-- Google Analytics Code -->
 		<script>
