@@ -49,3 +49,7 @@ main header h2 {
   padding: 70px;  
   background-color: rgba(255, 255, 255, 0.65);
 }
+
+#footer {
+  padding: 70px 0;
+}
