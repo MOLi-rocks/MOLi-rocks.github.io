@@ -489,19 +489,19 @@
 							<p>
 								<i class="large icons">
 									<a href="https://www.facebook.com/groups/MOLi.rocks/" target="_blank">
-										<i class="home icon circular" data-content="Facebook 社團" data-position="bottom center"></i>
+										<i class="home icon circular" data-content="Facebook 社團"></i>
 									</a>
 									<a href="https://www.facebook.com/MOLi.rocks" target="_blank">
-										<i class="facebook square icon circular" data-content="粉絲專頁" data-position="bottom center"></i>
+										<i class="facebook square icon circular" data-content="粉絲專頁"></i>
 									</a>
 									<a href="https://github.com/MOLi-rocks" target="_blank">
-										<i class="github icon circular" data-content="GitHub" data-position="bottom center"></i>
+										<i class="github icon circular" data-content="GitHub"></i>
 									</a>
 									<a href="https://moli.hackpad.com" target="_blank">
-										<i class="h icon circular" data-content="HackPad" data-position="bottom center"></i>
+										<i class="h icon circular" data-content="HackPad"></i>
 									</a>
 									<a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank">
-										<i class="send icon circular" data-content="Telegram Us!" data-position="bottom center"></i>
+										<i class="send icon circular" data-content="Telegram Us!"></i>
 									</a>
 								</i>
 							</p>
@@ -556,8 +556,11 @@
 				scrolltopoffset: -40,
 				highlightclass: "active"
 			});
-			$('.icon').popup();
-			$('.modal.mobile-menu').modal('attach events', '.mobile-menu-button', 'show');
+			$('.modal .mobile-menu').modal('attach events', '.mobile-menu-button', 'show');
+			$('.icon').popup({
+    				inline: true,
+    				position: 'bottom center',
+  			});
 		</script>
 	</body>
 </html>
