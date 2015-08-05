@@ -34,14 +34,6 @@ section {
   font-size: 17px;
 }
 
-/* JustFont 處理成功或失敗，都以漸變顯示 */
-.jf-active *, .jf-inactive * {
-  -webkit-transition: opacity 1s ease-out;
-  -moz-transition: opacity 1s ease-out;
-  -o-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
-}
-
 #menu {
   background-color: rgba(255,255,255,0.75);
 }
@@ -83,4 +75,17 @@ section {
 
 #footer {
   padding: 70px 0px 0px 0px;
+}
+
+/* JustFont 處理成功或失敗，都以漸變顯示 */
+.jf-loading body {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.jf-active *, .jf-inactive * {
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
 }
