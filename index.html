@@ -26,14 +26,33 @@
 	<link href='//fonts.googleapis.com/css?family=Gentium+Book Basic:700|Volkhov:700' rel='stylesheet' type='text/css'><script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-34705.js"></script>
 	<body>
 		<!-- Menu -->
-		<div id="menu" class="ui secondary pointing invert fixed menu">
-			<div class="ui container">
-				<a href="#banner" class="item">Home</a>
+		<div id="menu" class="ui secondary pointing invert fixed menu grid">
+			<div class="ui container computer tablet only row">
+				<a href="#banner" class="item mobile-menu-button">Home</a>
 				<a href="#intro" class="item">Intro</a>
 				<a href="#happyhour" class="item">HappyHour</a>
 				<a href="#event" class="item">Event</a>
 				<a href="#keyholders" class="item">Keyholders</a>
 				<a href="#about" class="item">About</a>
+			</div>
+			<div class="ui container mobile only row">
+				<a class="mobile-menu-button right item"><i class="content icon"></i></a>
+			</div>
+
+			<div class="ui basic modal mobile-menu">
+				<div class="ui two column centered grid">
+				  <div id="scrollMe" class="ui column aligned center">
+						<div id="mobile-menu" class="ui massive list">
+							<a href="#banner" class="item close">Home</a>
+							<a href="#intro" class="item close">Intro</a>
+							<a href="#happyhour" class="item close">HappyHour</a>
+							<a href="#event" class="item close">Event</a>
+							<a href="#keyholders" class="item close">Keyholders</a>
+							<a href="#about" class="item close">About</a>
+						</div>
+						<i class="ui close huge icon"></i>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="banner">
@@ -538,6 +557,7 @@
 				highlightclass: "active"
 			});
 			$('.icon').popup();
+			$('.modal.mobile-menu').modal('attach events', '.mobile-menu-button', 'show');
 		</script>
 	</body>
 </html>
