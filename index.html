@@ -235,9 +235,9 @@
 					</div>
 				</div>
 			</section>
-			
+
 			<div class="ui divider container"></div>
-			
+
 			<section id="event">
 				<header>
 					<div class="ui grid container stackable center aligned">
@@ -269,31 +269,40 @@
 								</h3>
 							</div>
 						</div>
-						<div class="ui segment center aligned">
+						<div class="ui piled segment center aligned">
 							<h1>
 								<i class="wizard icon circular"></i>Next MOLiDay<i class="wizard icon circular"></i>
 							</h1>
 							<div class="ui vertical segment left aligned">
-								<h2>
-									 <br>資安分享會 8/11 (Tue)
-								</h2>
+								<h2>資安分享會</h2>
 								<p>
-									「<br>
-									很多人想要作出自己的即時通訊軟體，<br>
+									「很多人想要作出自己的即時通訊軟體，<br>
 									理由是自己作的可以信任。<br>
 									但是，你有先研究已知問題嗎？<br>
 									你認知的安全方法，很多是至少10年以前的技術。」<br>
-									<br>
-									<strong>
-									時間：8 / 11(Tue) 2:30pm ~ 5:30pm<br>
-									地點：暨大管院，R241<br>
-									</strong>
-									<br>
+								</p>
+								<p>
 									此活動歡迎各路人馬來，可以盡量宣傳，<br>
 									但是活動中的筆記、錄音錄影等，希望不要公開分享。<br>
-									<br>
-									<strong> 報名網址： <a href="https://goo.gl/NsdksN">https://goo.gl/NsdksN</a><br></strong>
-									MOLi 相關資訊請參考： <a href="http://MOLi.rocks/">MOLi.rocks</a><br>
+								</p>
+								<div class="ui list">
+									<div class="item">
+										<i class="calendar icon"></i>
+										<div class="content">
+											08/11(Tue) 14:30~17:30
+										</div>
+									</div>
+									<div class="item">
+										<i class="marker icon"></i>
+										<div class="content" id="scrollMe">
+											暨大管院，R241 室（<a href="#about">MOLi</a> 隔壁）
+										</div>
+									</div>
+								</div>
+								<p>
+									<a href="https://goo.gl/NsdksN">
+										<button class="ui positive button fluid">立刻報名！</button>
+									</a>
 								</p>
 							</div>
 						</div>
@@ -305,7 +314,7 @@
 					</div>
 					<div class="column center aligned">
 						<div class="ui horizontal list center aligned">
-							
+
 							<div class="iconlist">
 								<h2 class="ui icon header">
 								<i class="user icon circular"></i>
@@ -330,8 +339,8 @@
 					</div>
 				</div>
 			</section>
-			
-			
+
+
 			<div class="ui divider container"></div>
 			<section id="keyholders">
 				<header>
@@ -510,6 +519,10 @@
 		</script>
 		<script>
 			$('#menu').ddscrollSpy({
+				scrolltopoffset: -40,
+				highlightclass: "active"
+			});
+			$('#scrollMe').ddscrollSpy({
 				scrolltopoffset: -40,
 				highlightclass: "active"
 			});
