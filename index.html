@@ -286,6 +286,7 @@
 								</h3>
 							</div>
 						</div>
+						<div style="display: none" class="molievent"></div>
 						<div class="ui piled segment center aligned">
 							<h1>
 								<i class="wizard icon circular"></i>Next MOLiDay<i class="wizard icon circular"></i><br>
@@ -555,9 +556,9 @@
     				inline: true,
     				position: 'top center',
   			});
-  			$.api.settings.api = {
-  				queryTags: '//moli.kktix.cc/events.json'
-			};
+  			$('.molievent').api({
+  				url: '//moli.kktix.cc/events.json'
+  			});
 		</script>
 	</body>
 </html>
