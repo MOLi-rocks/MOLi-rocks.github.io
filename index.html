@@ -290,22 +290,7 @@
 							<h1>
 								<i class="wizard icon circular"></i>Next MOLiDay<i class="wizard icon circular"></i><br>
 							</h1>
-							<div class="ui vertical segment left aligned">
-								<h2>MOLiDay #4 - 網頁前端基本功 - 用 Bootstrap 快速建立網頁 </h2>
-								(<strong>HelloWorld 系列 #2</strong>)
-								<p>
-									隨著 Web application 越來越發達，有時候想要自己開發一個小作品，卻不知道如何將介面擺放比較好？
-									<br><br>
-
-									或是你想要寫一個自己的個人網站，苦惱著 CSS 不知從何下手，卻又不想從頭手刻做起？
-								</p>
-								<p>
-									教學內容主要包含基礎的HTML、CSS 的介紹，以及簡單的 Bootstrap CSS framwork，並帶領大家一次了解從前端觀念、實作。
-								</p>
-								<a href="http://moli.kktix.cc/events/moliday-4-bootstrap">
-									<button class="ui positive button fluid">立刻報名！</button>
-								</a>								
-							</div>
+							<div id="molievent" class="ui vertical segment left aligned"></div>
 						</div>
 					</div>
 					<div class="column">
@@ -520,6 +505,7 @@
 		<script src="http://oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script src="js/ddscrollspy.js "></script>
+		<script src="js/style.js "></script>
 		<!-- Emebed map with Leaflet & OpenStreetMap -->
 		<script>
 			// initialize the map and maker
@@ -555,9 +541,9 @@
     				inline: true,
     				position: 'top center',
   			});
-  			$.api.settings.api = {
-  				queryTags: '//moli.kktix.cc/events.json'
-			};
+  			$(function() {
+  				setEvents();
+			});
 		</script>
 	</body>
 </html>
