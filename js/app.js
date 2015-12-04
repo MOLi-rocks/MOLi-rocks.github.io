@@ -1,6 +1,5 @@
 angular.module('moli', [])
   .controller('MOLiDayController', function($scope, $http) {
-    $scope.isSuccess = false;
     // 取得活動資訊
     $http.get('http://moli.kktix.cc/events.json')
       .success(function(data) {
@@ -19,7 +18,6 @@ angular.module('moli', [])
 
         // 綁定活動
         $scope.events = events;
-        $scope.isSuccess = true;
       })
       .error(function(err) {
         $scope.isError = true;

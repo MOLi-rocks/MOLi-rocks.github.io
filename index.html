@@ -270,23 +270,27 @@
 						<div class="ui piled segment center aligned" ng-controller="MOLiDayController">
 							<h1><i class="wizard icon"></i>Next MOLiDay</i></h1>
 
-							<p ng-if="isError == true">收不到活動資訊，請稍候再試。</p>
+							<p ng-if="isError == true">目前收不到活動資訊，請直接至<a href="http://moli.kktix.cc" target="_blank">活動網站<i class="mini external icon"></i></a>觀看。</p>
 
-							<div ng-if="isSuccess == true">
-								<div ng-if="events.length == 0">
-									<h2 ng-if="events.length == 0">暫無活動</h2>
-									<p>前往<a href="https://www.facebook.com/groups/MOLi.rocks">MOLi 群組</a>挖坑！</p>
-								</div>
-
-								<div class="ui vertical segment left aligned" ng-repeat="event in events | orderBy:'event.published':true | limitTo: 2">
-									<p class="ui teal ribbon label"><i class="calendar icon"></i>{{ event.published | date :'yyyy/MM/dd HH:mm'}}</p>
-									<h3>{{ event.title }}</h3>
-									<p>{{ event.summary }}</p>
-									<a href="{{ event.url }}"><button class="ui positive button fluid">立刻報名！</button></a>
-								</div>
-
-								<h3 ng-if="events.length > 2"><a href="http://moli.kktix.cc" target="_blank">觀看更多活動<i class="mini external icon"></i></a></h3>
+							<div ng-if="events.length == 0">
+								<h2 ng-if="events.length == 0">暫無活動</h2>
+								<p>前往<a href="https://www.facebook.com/groups/MOLi.rocks">MOLi 群組</a>挖坑！</p>
 							</div>
+
+							<div class="ui vertical segment left aligned" ng-repeat="event in events | orderBy:'event.published':true | limitTo: 2">
+								<p class="ui teal ribbon label">
+									<i class="calendar icon"></i>
+									<span ng-bind="event.published | date :'yyyy/MM/dd HH:mm'"></span>
+								</p>
+								<h3 ng-bind="event.title"></h3>
+								<p ng-bind="event.summary"></p>
+								<a href="{{ event.url }}">
+									<button class="ui positive button fluid">立刻報名！</button>
+								</a>
+							</div>
+
+							<h3 ng-if="events.length > 2"><a href="http://moli.kktix.cc" target="_blank">觀看更多活動<i class="mini external icon"></i></a></h3>
+
 						</div>
 					</div>
 					<div class="column">
