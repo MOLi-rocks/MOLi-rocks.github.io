@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="moli">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -266,31 +266,27 @@
 				</header>
 				<div class="ui three column grid container stackable center aligned">
 					<div class="column center aligned">
-						<div class="ui horizontal list center aligned">
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="calendar icon circular"></i>
-									<span>提前預約</span>
-								</h3>
+
+						<div class="ui piled segment center aligned" ng-controller="MOLiDayController">
+							<h1><i class="wizard icon"></i>Next MOLiDay</i></h1>
+
+							<p ng-if="isError == true">收不到活動資訊，請稍候再試。</p>
+
+							<div ng-if="isSuccess == true">
+								<div ng-if="events.length == 0">
+									<h2 ng-if="events.length == 0">暫無活動</h2>
+									<p>前往<a href="https://www.facebook.com/groups/MOLi.rocks">MOLi 群組</a>挖坑！</p>
+								</div>
+
+								<div class="ui vertical segment left aligned" ng-repeat="event in events | orderBy:'event.published':true | limitTo: 2">
+									<p class="ui teal ribbon label"><i class="calendar icon"></i>{{ event.published | date :'yyyy/MM/dd HH:mm'}}</p>
+									<h3>{{ event.title }}</h3>
+									<p>{{ event.summary }}</p>
+									<a href="{{ event.url }}"><button class="ui positive button fluid">立刻報名！</button></a>
+								</div>
+
+								<h3 ng-if="events.length > 2"><a href="http://moli.kktix.cc" target="_blank">觀看更多活動<i class="mini external icon"></i></a></h3>
 							</div>
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="trash outline icon circular"></i>
-									<span>隨手清潔</span>
-								</h3>
-							</div>
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="dollar icon circular"></i>
-									<span>自由捐獻</span>
-								</h3>
-							</div>
-						</div>
-						<div class="ui piled segment center aligned">
-							<h1>
-								<i class="wizard icon circular"></i>Next MOLiDay<i class="wizard icon circular"></i><br>
-							</h1>
-							<div id="molievent" class="ui vertical segment left aligned"></div>
 						</div>
 					</div>
 					<div class="column">
@@ -502,10 +498,12 @@
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="http://oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<script src="js/ddscrollspy.js "></script>
 		<script src="js/style.js "></script>
+		<script src="js/app.js "></script>
 		<!-- Emebed map with Leaflet & OpenStreetMap -->
 		<script>
 			// initialize the map and maker
@@ -542,7 +540,7 @@
 					position: 'top center',
 			});
 			$(function() {
-				eventlist.init();
+				setEvents();
 			});
 		</script>
 	</body>
