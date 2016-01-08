@@ -1,0 +1,9 @@
+node_modules/
+
+semantic/dist/
+semantic/tasks/
+
+.idea/
+*.log
+*.DS_Store
+*.keystore
