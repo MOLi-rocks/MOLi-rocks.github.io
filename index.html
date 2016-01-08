@@ -1,568 +1,568 @@
 <!DOCTYPE html>
-<html ng-app="moli">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="Wang-Mao-Lin">
-		<link rel="stylesheet" href="http://oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.css">
-		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
-		<!-- style -->
-		<link href="css/style.css" rel="stylesheet">
-		<title>MOLi.Rocks</title>
-		<!-- Google Analytics Code -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="Wang-Mao-Lin">
 
-			ga('create', 'UA-65940060-1', 'auto');
-			ga('send', 'pageview');
+    <title>MOLi.Rocks</title>
 
-		</script>
-	</head>
-	<body>
-		<!-- Menu -->
-		<div id="menu" class="ui secondary pointing invert fixed menu grid">
-			<div class="ui container computer tablet only row">
-				<a href="#banner" class="item">Home</a>
-				<a href="#intro" class="item">Intro</a>
-				<a href="#happyhour" class="item">HappyHour</a>
-				<a href="#event" class="item">Event</a>
-				<a href="#keyholders" class="item">Keyholders</a>
-				<a href="#about" class="item">About</a>
-			</div>
-			<div class="ui container mobile only row">
-				<a class="mobile-menu-button right item"><i class="content icon"></i></a>
-			</div>
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-			<div class="ui basic modal mobile-menu">
-				<div class="ui two column centered grid">
-				  <div id="scrollMe" class="ui column aligned center">
-						<div id="mobile-menu" class="ui massive list">
-							<a href="#banner" class="item close">Home</a>
-							<a href="#intro" class="item close">Intro</a>
-							<a href="#happyhour" class="item close">HappyHour</a>
-							<a href="#event" class="item close">Event</a>
-							<a href="#keyholders" class="item close">Keyholders</a>
-							<a href="#about" class="item close">About</a>
-						</div>
-						<i class="ui close huge icon"></i>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="banner">
-			<header class="hgroup">
-				<div class="ui grid container stackable center aligned">
-					<div class="ui vertical segment center aligned">
-						<h1 id="site-title" class="ui huge header">創新自造者開放實驗室</h1>
-						<h2 id="site-description" class="ui sub header"><i>Makers' Open Lab for Innovation</i></h2>
-						<h2 id="site-description" class="ui sub header"><i>We Make, We Hack, We Share.</i></h2>
-					</div>
-				</div>
-			</header>
-		</div>
-		<main>
-			<section id="intro">
-				<header>
-					<div class="ui grid container stackable center aligned">
-						<div class="ui vertical segment center aligned">
-							<h1>MOLi <i class="small heart icon red"></i>開放（空間｜實驗室｜教學）</h1>
-						</div>
-					</div>
-				</header>
-				<div class="ui grid container stackable center aligned">
-					<div class="ui vertical segment center aligned">
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="lab icon circular"></i>
-								<span>研究精神</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="heart icon circular"></i>
-								<span>開放熱情</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="wifi icon circular"></i>
-								<span>高速網路</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="child icon circular"></i>
-								<span>程式猿鼓勵師</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="book icon circular"></i>
-								<span>資訊用書</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="print icon circular"></i>
-								<span>3D列印/建模</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="plug icon circular"></i>
-								<span>休息處所</span>
-							</h2>
-						</div>
-						<div class="iconlist">
-							<h2 class="ui icon header">
-							<i class="sound icon circular"></i>
-								<span>視聽饗宴</span>
-							</h2>
-						</div>
-					</div>
-					<div>
-						<img src="https://lh3.googleusercontent.com/uSEiuvM0FFQIKk3UUUE-GvDzU0anCo4JbJi5rhD6QIU_=w1280-h378-no">
-					</div>
-				</div>
-			</section>
-			<div class="ui divider container"></div>
-			<section id="happyhour">
-				<header>
-					<div class="ui grid container stackable center aligned">
-						<div class="ui vertical segment center aligned">
-							<h1>HappyHour</h1>
-							<h2>Opening Hours & Schedule</h2>
-						</div>
-					</div>
-				</header>
-				<div class="ui three column grid container stackable">
-					<div class="column center aligned">
-						<div class="ui horizontal list center aligned">
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="wizard icon circular"></i>
-									<span>MOLiDay</span>
-								</h3>
-							</div>
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="announcement icon circular"></i>
-									<span>Random Speech</span>
-								</h3>
-							</div>
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="doctor icon circular"></i>
-									<span>除憂解惑</span>
-								</h3>
-							</div>
-						</div>
-						<div class="ui vertical segment center aligned">
-							<p>
-								月月都有 <strong>MOLiDay</strong>，<br>
-								不時邀請各方講師，<br>
-								常常會有各類分享。<br>
-								<br>
-								傳道授業除憂解惑抓蟲抓漏，<br>
-								只要想學習，我們找方法！<br>
-								<br>
-								一起共筆，一起學習，圖文影音筆記公開分享<br>
-							</p>
-							<div class="ui horizontal list">
-								<div class="iconlist">
-									<h4 class="ui icon header">
-									<i class="file image outline icon circular"></i>
-									</h4>
-								</div>
-								<div class="iconlist">
-									<h4 class="ui icon header">
-									<i class="file audio outline icon circular"></i>
-									</h4>
-								</div>
-								<div class="iconlist">
-									<h4 class="ui icon header">
-									<i class="file video outline icon circular"></i>
-									</h4>
-								</div>
-								<div class="iconlist">
-									<h4 class="ui icon header">
-									<i class="file text outline icon circular"></i>
-									</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="ui vertical segment">
-							<img class="ui medium centered rounded image" src="img/Yuer1.gif">
-						</div>
-					</div>
-					<div class="column center aligned">
-						<div class="ui horizontal list center aligned">
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="wait icon circular"></i>
-									<span>24Hrs Open</span>
-								</h3>
-							</div>
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="privacy icon circular"></i>
-									<span>Keyholders</span>
-								</h3>
-							</div>
-							<div class="iconlist">
-								<h3 class="ui icon header">
-								<i class="unhide icon circular"></i>
-									<span>24H 安控</span>
-								</h3>
-							</div>
-						</div>
-						<div class="ui vertical segment center aligned">
-							<p>
-								幾乎天天隨時都有 Keyholders 在 MOLi，<br>
-								一週 24 x 7 全天開放，並有全時安控錄影，<br>
-								半夜待在 MOLi 也完全不用擔心！<br>
-								<br>
-								如果想來時不確定是否有人，可以到群組上詢問。
-							</p>
-							<div class="ui horizontal list">
-								<div class="iconlist">
-									<a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">
-										<h2 class="ui icon blue header">
-										<i class="send icon circular"></i>
-											<span>Telegram</span>
-										</h2>
-									</a>
-								</div>
-								<div class="iconlist">
-									<a href="https://www.facebook.com/MOLi.rocks" target="_blank" titile ="MOLi_Facebook">
-										<h2 class="ui icon blue header">
-										<i class="facebook icon circular"></i>
-											<span>Facebook</span>
-										</h2>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <!-- Google Analytics Code -->
+    <script src="assets/js/google-analytics.js"></script>
+  </head>
+  <body ng-app="moli" ng-cloak>
+    <!-- Menu -->
+    <div id="menu" class="ui secondary pointing invert fixed menu grid">
+      <div class="ui container computer tablet only row">
+        <a href="#banner" class="item">Home</a>
+        <a href="#intro" class="item">Intro</a>
+        <a href="#happyhour" class="item">HappyHour</a>
+        <a href="#event" class="item">Event</a>
+        <a href="#keyholders" class="item">Keyholders</a>
+        <a href="#about" class="item">About</a>
+      </div>
+      <div class="ui container mobile only row">
+        <a class="mobile-menu-button right item"><i class="content icon"></i></a>
+      </div>
 
-			<div class="ui divider container"></div>
+      <div class="ui basic modal mobile-menu">
+        <div class="ui two column centered grid">
+          <div id="scrollMe" class="ui column aligned center">
+            <div id="mobile-menu" class="ui massive list">
+              <a href="#banner" class="item close">Home</a>
+              <a href="#intro" class="item close">Intro</a>
+              <a href="#happyhour" class="item close">HappyHour</a>
+              <a href="#event" class="item close">Event</a>
+              <a href="#keyholders" class="item close">Keyholders</a>
+              <a href="#about" class="item close">About</a>
+            </div>
+            <i class="ui close huge icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="banner">
+      <header class="hgroup">
+        <div class="ui grid container stackable center aligned">
+          <div class="ui vertical segment center aligned">
+            <h1 id="site-title" class="ui huge header">創新自造者開放實驗室</h1>
+            <h2 id="site-description" class="ui sub header"><i>Makers' Open Lab for Innovation</i></h2>
+            <h2 id="site-description" class="ui sub header"><i>We Make, We Hack, We Share.</i></h2>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main>
+      <section id="intro">
+        <header>
+          <div class="ui grid container stackable center aligned">
+            <div class="ui vertical segment center aligned">
+              <h1>MOLi <i class="small heart icon red"></i>開放（空間｜實驗室｜教學）</h1>
+            </div>
+          </div>
+        </header>
+        <div class="ui grid container stackable center aligned">
+          <div class="ui vertical segment center aligned">
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="lab icon circular"></i>
+                <span>研究精神</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="heart icon circular"></i>
+                <span>開放熱情</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="wifi icon circular"></i>
+                <span>高速網路</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="child icon circular"></i>
+                <span>程式猿鼓勵師</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="book icon circular"></i>
+                <span>資訊用書</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="print icon circular"></i>
+                <span>3D列印/建模</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="plug icon circular"></i>
+                <span>休息處所</span>
+              </h2>
+            </div>
+            <div class="iconlist">
+              <h2 class="ui icon header">
+              <i class="sound icon circular"></i>
+                <span>視聽饗宴</span>
+              </h2>
+            </div>
+          </div>
+          <div>
+            <img src="https://lh3.googleusercontent.com/uSEiuvM0FFQIKk3UUUE-GvDzU0anCo4JbJi5rhD6QIU_=w1280-h378-no">
+          </div>
+        </div>
+      </section>
+      <div class="ui divider container"></div>
+      <section id="happyhour">
+        <header>
+          <div class="ui grid container stackable center aligned">
+            <div class="ui vertical segment center aligned">
+              <h1>HappyHour</h1>
+              <h2>Opening Hours & Schedule</h2>
+            </div>
+          </div>
+        </header>
+        <div class="ui three column grid container stackable">
+          <div class="column center aligned">
+            <div class="ui horizontal list center aligned">
+              <div class="iconlist">
+                <h3 class="ui icon header">
+                <i class="wizard icon circular"></i>
+                  <span>MOLiDay</span>
+                </h3>
+              </div>
+              <div class="iconlist">
+                <h3 class="ui icon header">
+                <i class="announcement icon circular"></i>
+                  <span>Random Speech</span>
+                </h3>
+              </div>
+              <div class="iconlist">
+                <h3 class="ui icon header">
+                <i class="doctor icon circular"></i>
+                  <span>除憂解惑</span>
+                </h3>
+              </div>
+            </div>
+            <div class="ui vertical segment center aligned">
+              <p>
+                月月都有 <strong>MOLiDay</strong>，<br>
+                不時邀請各方講師，<br>
+                常常會有各類分享。<br>
+                <br>
+                傳道授業除憂解惑抓蟲抓漏，<br>
+                只要想學習，我們找方法！<br>
+                <br>
+                一起共筆，一起學習，圖文影音筆記公開分享<br>
+              </p>
+              <div class="ui horizontal list">
+                <div class="iconlist">
+                  <h4 class="ui icon header">
+                  <i class="file image outline icon circular"></i>
+                  </h4>
+                </div>
+                <div class="iconlist">
+                  <h4 class="ui icon header">
+                  <i class="file audio outline icon circular"></i>
+                  </h4>
+                </div>
+                <div class="iconlist">
+                  <h4 class="ui icon header">
+                  <i class="file video outline icon circular"></i>
+                  </h4>
+                </div>
+                <div class="iconlist">
+                  <h4 class="ui icon header">
+                  <i class="file text outline icon circular"></i>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical segment">
+              <img class="ui medium centered rounded image" src="img/Yuer1.gif">
+            </div>
+          </div>
+          <div class="column center aligned">
+            <div class="ui horizontal list center aligned">
+              <div class="iconlist">
+                <h3 class="ui icon header">
+                <i class="wait icon circular"></i>
+                  <span>24Hrs Open</span>
+                </h3>
+              </div>
+              <div class="iconlist">
+                <h3 class="ui icon header">
+                <i class="privacy icon circular"></i>
+                  <span>Keyholders</span>
+                </h3>
+              </div>
+              <div class="iconlist">
+                <h3 class="ui icon header">
+                <i class="unhide icon circular"></i>
+                  <span>24H 安控</span>
+                </h3>
+              </div>
+            </div>
+            <div class="ui vertical segment center aligned">
+              <p>
+                幾乎天天隨時都有 Keyholders 在 MOLi，<br>
+                一週 24 x 7 全天開放，並有全時安控錄影，<br>
+                半夜待在 MOLi 也完全不用擔心！<br>
+                <br>
+                如果想來時不確定是否有人，可以到群組上詢問。
+              </p>
+              <div class="ui horizontal list">
+                <div class="iconlist">
+                  <a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">
+                    <h2 class="ui icon blue header">
+                    <i class="send icon circular"></i>
+                      <span>Telegram</span>
+                    </h2>
+                  </a>
+                </div>
+                <div class="iconlist">
+                  <a href="https://www.facebook.com/MOLi.rocks" target="_blank" titile ="MOLi_Facebook">
+                    <h2 class="ui icon blue header">
+                    <i class="facebook icon circular"></i>
+                      <span>Facebook</span>
+                    </h2>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			<section id="event">
-				<header>
-					<div class="ui grid container stackable center aligned">
-						<div class="ui vertical segment center aligned">
-							<h1>舉辦活動</h1>
-							<h2>Host an Event Here</h2>
-						</div>
-					</div>
-				</header>
-				<div class="ui three column grid container stackable center aligned">
-					<div class="column center aligned">
+      <div class="ui divider container"></div>
 
-						<div class="ui piled segment center aligned" ng-controller="MOLiDayController">
-							<h1><i class="wizard icon"></i>Next MOLiDay</i></h1>
+      <section id="event">
+        <header>
+          <div class="ui grid container stackable center aligned">
+            <div class="ui vertical segment center aligned">
+              <h1>舉辦活動</h1>
+              <h2>Host an Event Here</h2>
+            </div>
+          </div>
+        </header>
+        <div class="ui three column grid container stackable center aligned">
+          <div class="column center aligned">
 
-							<p ng-if="isError == true">目前收不到活動資訊，請直接至<a href="http://moli.kktix.cc" target="_blank">活動網站<i class="mini external icon"></i></a>觀看。</p>
+            <div class="ui piled segment center aligned" ng-controller="MOLiDayController as vm">
+              <h1><i class="wizard icon"></i>Next MOLiDay</i></h1>
 
-							<div ng-if="events.length == 0">
-								<h2 ng-if="events.length == 0">暫無活動</h2>
-								<p>前往<a href="https://www.facebook.com/groups/MOLi.rocks">MOLi 群組</a>挖坑！</p>
-							</div>
+              <p ng-if="vm.isError">目前收不到活動資訊，請直接至<a href="http://moli.kktix.cc" target="_blank">活動網站<i class="mini external icon"></i></a>觀看。</p>
 
-							<div class="ui vertical segment left aligned" ng-repeat="event in events | orderBy:'event.published':true | limitTo: 2">
-								<p class="ui teal ribbon label">
-									<i class="calendar icon"></i>
-									<span ng-bind="event.published | date :'yyyy/MM/dd HH:mm'"></span>
-								</p>
-								<h3 ng-bind="event.title"></h3>
-								<p ng-bind="event.summary"></p>
-								<a href="{{ event.url }}">
-									<button class="ui positive button fluid">立刻報名！</button>
-								</a>
-							</div>
+              <div ng-if="vm.events.length == 0">
+                <h2 ng-if="vm.events.length == 0 && !vm.isError">暫無活動</h2>
+                <p>前往<a href="https://www.facebook.com/groups/MOLi.rocks">MOLi 群組</a>挖坑！</p>
+              </div>
 
-							<h3 ng-if="events.length > 2"><a href="http://moli.kktix.cc" target="_blank">觀看更多活動<i class="mini external icon"></i></a></h3>
+              <div class="ui vertical segment left aligned" ng-repeat="event in vm.events | orderBy:'event.published':true | limitTo: 2">
+                <p class="ui teal ribbon label">
+                  <i class="calendar icon"></i>
+                  <span ng-bind="event.published | date :'yyyy/MM/dd HH:mm'"></span>
+                </p>
+                <h3 ng-bind="event.title"></h3>
+                <p ng-bind="event.summary"></p>
+                <a ng-href="{{ event.url }}">
+                  <button class="ui positive button fluid">立刻報名！</button>
+                </a>
+              </div>
 
-						</div>
-					</div>
-					<div class="column">
-						<div class="ui vertical segment">
-							<h2>活動排程</h2>
-							<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=100&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=kaa274230d7ilaatrqvqk0nnjg%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=Asia%2FTaipei" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-						</div>
-					</div>
-					<div class="column center aligned">
-						<div class="ui horizontal list center aligned">
+              <h3 ng-if="vm.events.length > 2"><a href="http://moli.kktix.cc" target="_blank">觀看更多活動<i class="mini external icon"></i></a></h3>
 
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="user icon circular"></i>
-									<span>座位 15 個</span>
-								</h2>
-							</div>
-							<div class="iconlist">
-								<h2 class="ui icon header">
-								<i class="users icon circular"></i>
-									<span>能擠 30 人</span>
-								</h2>
-							</div>
-						</div>
-						<div class="ui vertical segment">
-							<div class="ui center aligned">
-								<div class="ui medium rounded images">
-									<a data-flickr-embed="true"  href="https://www.flickr.com/photos/136220517@N08/23088913536/in/pool-moli/" title="2015-11-18 20.21.41-2"><img src="https://farm1.staticflickr.com/667/23088913536_fd021d6f07_k.jpg" width="2048" height="1536" alt="2015-11-18 20.21.41-2"></a>
-									<a data-flickr-embed="true"  href="https://www.flickr.com/photos/136220517@N08/22493754963/in/pool-moli/" title="2015-11-18 20.32.05"><img src="https://farm1.staticflickr.com/600/22493754963_cdb42aeaf1_k.jpg" width="2048" height="1536" alt="2015-11-18 20.32.05"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical segment">
+              <h2>活動排程</h2>
+              <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=100&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=kaa274230d7ilaatrqvqk0nnjg%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=Asia%2FTaipei" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+          <div class="column center aligned">
+            <div class="ui horizontal list center aligned">
+
+              <div class="iconlist">
+                <h2 class="ui icon header">
+                <i class="user icon circular"></i>
+                  <span>座位 15 個</span>
+                </h2>
+              </div>
+              <div class="iconlist">
+                <h2 class="ui icon header">
+                <i class="users icon circular"></i>
+                  <span>能擠 30 人</span>
+                </h2>
+              </div>
+            </div>
+            <div class="ui vertical segment">
+              <div class="ui center aligned">
+                <div class="ui medium rounded images">
+                  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/136220517@N08/23088913536/in/pool-moli/" title="2015-11-18 20.21.41-2"><img src="https://farm1.staticflickr.com/667/23088913536_fd021d6f07_k.jpg" width="2048" height="1536" alt="2015-11-18 20.21.41-2"></a>
+                  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/136220517@N08/22493754963/in/pool-moli/" title="2015-11-18 20.32.05"><img src="https://farm1.staticflickr.com/600/22493754963_cdb42aeaf1_k.jpg" width="2048" height="1536" alt="2015-11-18 20.32.05"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-			<div class="ui divider container"></div>
-			<section id="keyholders">
-				<header>
-					<div class="ui grid container stackable center aligned">
-						<div class="ui vertical segment center aligned">
-							<h1>現任 Keyholders</h1>
-						</div>
-					</div>
-				</header>
-				<div class="ui grid container stackable">
-					<div class="ui seven column grid center aligned">
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
-								</div>
-								<div class="content">
-									<a class="header">老俞</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar2/large/elyse.png">
-								</div>
-								<div class="content">
-									<a class="header">BlueT</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-								</div>
-								<div class="content">
-									<a class="header">天天</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar/large/daniel.jpg">
-								</div>
-								<div class="content">
-									<a class="header">Yuer</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar/large/steve.jpg">
-								</div>
-								<div class="content">
-									<a class="header">茂林</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://www.semantic-ui.com/images/avatar/large/justen.jpg">
-								</div>
-								<div class="content">
-									<a class="header">nhss</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar/large/veronika.jpg">
-								</div>
-								<div class="content">
-									<a class="header">乃嘉</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar/large/stevie.jpg">
-								</div>
-								<div class="content">
-									<a class="header">小青</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://www.semantic-ui.com/images/avatar/large/matt.jpg">
-								</div>
-								<div class="content">
-									<a class="header">展瑩</a>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="ui fluid card">
-								<div class="image">
-									<img src="http://semantic-ui.com/images/avatar/large/chris.jpg">
-								</div>
-								<div class="content">
-									<a class="header">蛋蛋</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="ui divider container"></div>
-			<section id="about">
-				<header>
-					<div class="ui grid container stackable center aligned">
-						<div class="ui vertical segment center aligned">
-							<h1>關於MOLi</h1>
-							<h2>About MOLi</h2>
-						</div>
-					</div>
-				</header>
-				<div class="ui grid container stackable">
-					<div class="ui eight wide column grid">
-						<div class="ui vertical segment">
-							<div class="ui center aligned" id="map"></div>
-							<p><i class="ui pointing right icon"></i>使用 <a href="https://www.openstreetmap.org/#map=18/23.9519631/120.9274402" target="_blank">OpenStreetMap</a> 或 <a href="https://goo.gl/maps/XjaoV" target="_blank">Google Map</a> 檢視</p>
-							<div class="ui list">
-								<div class="item">
-									<div class="header">地址</div>
-									南投縣埔里鎮大學路 470 號管理學院 237 室
-								</div>
-								<div class="item">
-									<div class="header">Address</div>
-									Room 237 in Management Building, in Nationl Chi-Nan University.
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="ui eight wide column grid">
-						<div class="ui vertical segment">
-							<p><strong>We Make, We Hack, We Share.</strong></p>
-							<p>
-								The Makers' Open Lab for Innovation is a place opening to everyone.<br>
-								Anyone who loves to create things and share with others are welcome.<br>
-								Basically for free.<br>
-								<br>
-								We wish to build a different kind of lab, a new lab with required equipments for Self-Making people.<br>
-								At least we'll prepare PCB boards, 3D Printer, Resistors, and things you might need.<br>
-								We're building it, please join us and let's work on it together.<br>
-							</p>
-							<br>
-							<p>
-								<i class="large icons">
-									<a href="https://MOLi.rocks" target="_blank" title="MOLi_Home">
-										<i class="home icon circular" data-content="官網"></i>
-									</a>
-									<a href="https://www.facebook.com/MOLi.rocks" target="_blank" title="MOLi_FB_fanspage">
-										<i class="facebook square icon circular" data-content="粉絲專頁"></i>
-									</a>
-									<a href="https://www.facebook.com/groups/MOLi.rocks/" target="_blank" title="MOLi_FB_group">
-										<i class="facebook icon circular" data-content="Facebook 社團"></i>
-									</a>
-									<a href="https://github.com/MOLi-rocks" target="_blank" title="MOLi_GitHub">
-										<i class="github icon circular" data-content="GitHub"></i>
-									</a>
-									<a href="https://moli.hackpad.com" target="_blank" title="MOLi_Hackpad">
-										<i class="h icon circular" data-content="HackPad"></i>
-									</a>
-									<a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">
-										<i class="send icon circular" data-content="Telegram Us!"></i>
-									</a>
-								</i>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="ui divider container"></div>
-		</main>
-		<footer id="footer">
-			<div class="ui vertical segment">
-				<div class="ui center aligned container">
-					<p>&copy; MOLi.Rocks 2015</p>
-					<div class="ui horizontal small link list">
-						<a class="item" href="#happyhour">Contact Us</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+      <div class="ui divider container"></div>
+      <section id="keyholders">
+        <header>
+          <div class="ui grid container stackable center aligned">
+            <div class="ui vertical segment center aligned">
+              <h1>現任 Keyholders</h1>
+            </div>
+          </div>
+        </header>
+        <div class="ui grid container stackable">
+          <div class="ui seven column grid center aligned">
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+                </div>
+                <div class="content">
+                  <a class="header">老俞</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar2/large/elyse.png">
+                </div>
+                <div class="content">
+                  <a class="header">BlueT</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
+                </div>
+                <div class="content">
+                  <a class="header">天天</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar/large/daniel.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Yuer</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar/large/steve.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">茂林</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://www.semantic-ui.com/images/avatar/large/justen.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">nhss</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar/large/veronika.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">乃嘉</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar/large/stevie.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">小青</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://www.semantic-ui.com/images/avatar/large/matt.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">展瑩</a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="http://semantic-ui.com/images/avatar/large/chris.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">蛋蛋</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="ui divider container"></div>
+      <section id="about">
+        <header>
+          <div class="ui grid container stackable center aligned">
+            <div class="ui vertical segment center aligned">
+              <h1>關於MOLi</h1>
+              <h2>About MOLi</h2>
+            </div>
+          </div>
+        </header>
+        <div class="ui grid container stackable">
+          <div class="ui eight wide column grid">
+            <div class="ui vertical segment">
+              <div class="ui center aligned" id="map"></div>
+              <p><i class="ui pointing right icon"></i>使用 <a href="https://www.openstreetmap.org/#map=18/23.9519631/120.9274402" target="_blank">OpenStreetMap</a> 或 <a href="https://goo.gl/maps/XjaoV" target="_blank">Google Map</a> 檢視</p>
+              <div class="ui list">
+                <div class="item">
+                  <div class="header">地址</div>
+                  南投縣埔里鎮大學路 470 號管理學院 237 室
+                </div>
+                <div class="item">
+                  <div class="header">Address</div>
+                  Room 237 in Management Building, in Nationl Chi-Nan University.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui eight wide column grid">
+            <div class="ui vertical segment">
+              <p><strong>We Make, We Hack, We Share.</strong></p>
+              <p>
+                The Makers' Open Lab for Innovation is a place opening to everyone.<br>
+                Anyone who loves to create things and share with others are welcome.<br>
+                Basically for free.<br>
+                <br>
+                We wish to build a different kind of lab, a new lab with required equipments for Self-Making people.<br>
+                At least we'll prepare PCB boards, 3D Printer, Resistors, and things you might need.<br>
+                We're building it, please join us and let's work on it together.<br>
+              </p>
+              <br>
+              <p>
+                <i class="large icons">
+                  <a href="https://MOLi.rocks" target="_blank" title="MOLi_Home">
+                    <i class="home icon circular" data-content="官網"></i>
+                  </a>
+                  <a href="https://www.facebook.com/MOLi.rocks" target="_blank" title="MOLi_FB_fanspage">
+                    <i class="facebook square icon circular" data-content="粉絲專頁"></i>
+                  </a>
+                  <a href="https://www.facebook.com/groups/MOLi.rocks/" target="_blank" title="MOLi_FB_group">
+                    <i class="facebook icon circular" data-content="Facebook 社團"></i>
+                  </a>
+                  <a href="https://github.com/MOLi-rocks" target="_blank" title="MOLi_GitHub">
+                    <i class="github icon circular" data-content="GitHub"></i>
+                  </a>
+                  <a href="https://moli.hackpad.com" target="_blank" title="MOLi_Hackpad">
+                    <i class="h icon circular" data-content="HackPad"></i>
+                  </a>
+                  <a href="https://telegram.me/joinchat/027b595a00cd89472152fbffb58dcf3e" target="_blank" title="MOLi_Telegram">
+                    <i class="send icon circular" data-content="Telegram Us!"></i>
+                  </a>
+                </i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="ui divider container"></div>
+    </main>
+    <footer id="footer">
+      <div class="ui vertical segment">
+        <div class="ui center aligned container">
+          <p>&copy; MOLi.Rocks 2015</p>
+          <div class="ui horizontal small link list">
+            <a class="item" href="#happyhour">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script src="http://oss.maxcdn.com/semantic-ui/2.0.7/semantic.min.js"></script>
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-		<script src="js/ddscrollspy.js "></script>
-		<script src="js/style.js "></script>
-		<script src="js/app.js "></script>
-		<!-- Emebed map with Leaflet & OpenStreetMap -->
-		<script>
-			// initialize the map and maker
-			var map = L.map('map').setView([23.9519631, 120.9274402], 17);
-			var marker = L.marker([23.9519631, 120.9274402]);
-			// load a tile layer
-			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-				{
-					attribution: '地圖資訊 © <a href="http://openstreetmap.org">OpenStreetMap 貢獻者</a> ♥',
-				}).addTo(map);
-			// load marker
-			marker.addTo(map);
-			marker.bindPopup("MOLi 在這裡!").openPopup();
-			// Disable drag and zoom handlers.
-			map.dragging.disable();
-			map.scrollWheelZoom.disable();
-			map.boxZoom.disable();
-			map.keyboard.disable();
-			// Disable tap handler, if present.
-			if (map.tap) map.tap.disable();
-		</script>
-		<script>
-			$('#menu').ddscrollSpy({
-				scrolltopoffset: -40,
-				highlightclass: "active"
-			});
-			$('#scrollMe').ddscrollSpy({
-				scrolltopoffset: -40,
-				highlightclass: "active"
-			});
-			$('.modal.mobile-menu').modal('attach events', '.mobile-menu-button', 'show');
-			$('.icon').popup({
-					inline: true,
-					position: 'top center',
-			});
-		</script>
-	</body>
+    <!-- Angular.js Libraries -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Semantic-UI Library -->
+    <script src="semantic/dist/semantic.min.js"></script>
+    <!-- Third-party Library -->
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="assets/js/ddscrollspy.js "></script>
+    <!-- Application bootstrap  -->
+    <script src="app/app.module.js"></script>
+    <script src="app/moliday/moliday.controller.js"></script>
+    <script src="app/moliday/moliday.service.js"></script>
+    <!-- Emebed map with Leaflet & OpenStreetMap -->
+    <script>
+      // initialize the map and maker
+      var map = L.map('map').setView([23.9519631, 120.9274402], 17);
+      var marker = L.marker([23.9519631, 120.9274402]);
+      // load a tile layer
+      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+          attribution: '地圖資訊 © <a href="http://openstreetmap.org">OpenStreetMap 貢獻者</a> ♥',
+        }).addTo(map);
+      // load marker
+      marker.addTo(map);
+      marker.bindPopup("MOLi 在這裡!").openPopup();
+      // Disable drag and zoom handlers.
+      map.dragging.disable();
+      map.scrollWheelZoom.disable();
+      map.boxZoom.disable();
+      map.keyboard.disable();
+      // Disable tap handler, if present.
+      if (map.tap) map.tap.disable();
+    </script>
+    <script>
+      $('#menu').ddscrollSpy({
+        scrolltopoffset: -40,
+        highlightclass: "active"
+      });
+      $('#scrollMe').ddscrollSpy({
+        scrolltopoffset: -40,
+        highlightclass: "active"
+      });
+      $('.modal.mobile-menu').modal('attach events', '.mobile-menu-button', 'show');
+      $('.icon').popup({
+          inline: true,
+          position: 'top center'
+      });
+    </script>
+  </body>
 </html>
