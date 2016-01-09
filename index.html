@@ -21,12 +21,12 @@
     <!-- Menu -->
     <div id="menu" class="ui secondary pointing invert fixed menu grid">
       <div class="ui container computer tablet only row">
-        <a href="#banner" class="item">Home</a>
-        <a href="#intro" class="item">Intro</a>
-        <a href="#happyhour" class="item">HappyHour</a>
-        <a href="#event" class="item">Event</a>
-        <a href="#keyholders" class="item">Keyholders</a>
-        <a href="#about" class="item">About</a>
+        <a href="#banner" class="item" offset="30" du-smooth-scroll du-scrollspy  >Home</a>
+        <a href="#intro" class="item" offset="30" du-smooth-scroll du-scrollspy>Intro</a>
+        <a href="#happyhour" class="item" offset="30" du-smooth-scroll du-scrollspy>HappyHour</a>
+        <a href="#event" class="item" offset="30" du-smooth-scroll du-scrollspy>Event</a>
+        <a href="#keyholders" class="item" offset="30" du-smooth-scroll du-scrollspy>Keyholders</a>
+        <a href="#about" class="item" offset="30" du-smooth-scroll du-scrollspy>About</a>
       </div>
       <div class="ui container mobile only row">
         <a class="mobile-menu-button right item"><i class="content icon"></i></a>
@@ -34,14 +34,14 @@
 
       <div class="ui basic modal mobile-menu">
         <div class="ui two column centered grid">
-          <div id="scrollMe" class="ui column aligned center">
+          <div class="aligned center">
             <div id="mobile-menu" class="ui massive list">
-              <a href="#banner" class="item close">Home</a>
-              <a href="#intro" class="item close">Intro</a>
-              <a href="#happyhour" class="item close">HappyHour</a>
-              <a href="#event" class="item close">Event</a>
-              <a href="#keyholders" class="item close">Keyholders</a>
-              <a href="#about" class="item close">About</a>
+              <a href="#banner" class="item close" offset="40" du-smooth-scroll du-scrollspy>Home</a>
+              <a href="#intro" class="item close" offset="40" du-smooth-scroll du-scrollspy>Intro</a>
+              <a href="#happyhour" class="item close" offset="40" du-smooth-scroll du-scrollspy>HappyHour</a>
+              <a href="#event" class="item close" offset="40" du-smooth-scroll du-scrollspy>Event</a>
+              <a href="#keyholders" class="item close" offset="40" du-smooth-scroll du-scrollspy>Keyholders</a>
+              <a href="#about" class="item close" offset="40" du-smooth-scroll du-scrollspy>About</a>
             </div>
             <i class="ui close huge icon"></i>
           </div>
@@ -518,15 +518,16 @@
 
     <!-- Angular.js Libraries -->
     <script src="node_modules/angular/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Semantic-UI Library -->
     <script src="semantic/dist/semantic.min.js"></script>
     <!-- Third-party Library -->
     <script src="node_modules/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
     <script src="node_modules/leaflet/dist/leaflet.js"></script>
     <script src="node_modules/ui-leaflet/dist/ui-leaflet.min.js"></script>
-    <script src="assets/js/ddscrollspy.js "></script>
+    <script src="node_modules/angular-scroll/angular-scroll.min.js"></script>
     <!-- Application bootstrap  -->
+    <script src="app/app.jquery.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/moliday/moliday.controller.js"></script>
     <script src="app/moliday/moliday.service.js"></script>

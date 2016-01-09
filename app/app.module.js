@@ -3,9 +3,11 @@
 
   angular
     .module('moli', [
-      /* ui-leaflet's library */
+      /* ui-leaflet */
       'nemLogging',
-      'ui-leaflet'
+      'ui-leaflet',
+      /* angular-scroll */
+      'duScroll'
     ]);
 
 })();
