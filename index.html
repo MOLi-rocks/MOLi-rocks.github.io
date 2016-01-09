@@ -448,11 +448,11 @@
           </div>
         </header>
         <div class="ui grid container stackable">
-          <div class="ui eight wide column grid">
-            <div class="ui vertical segment">
-              <div class="ui center aligned" id="map"></div>
-              <p><i class="ui pointing right icon"></i>使用 <a href="https://www.openstreetmap.org/#map=18/23.9519631/120.9274402" target="_blank">OpenStreetMap</a> 或 <a href="https://goo.gl/maps/XjaoV" target="_blank">Google Map</a> 檢視</p>
-              <div class="ui list">
+          <div class="eight wide column grid" ng-controller="MapController as vm">
+            <div class="vertical segment" >
+              <leaflet class="center aligned" defaults="vm.defaults" markers="vm.markers" lf-center="vm.NCNU" height="360px" width="100%"></leaflet>
+              <p><i class="pointing right icon"></i>使用 <a href="https://www.openstreetmap.org/#map=18/23.9519631/120.9274402" target="_blank">OpenStreetMap</a> 或 <a href="https://goo.gl/maps/XjaoV" target="_blank">Google Map</a> 檢視</p>
+              <div class="list">
                 <div class="item">
                   <div class="header">地址</div>
                   南投縣埔里鎮大學路 470 號管理學院 237 室
@@ -464,8 +464,8 @@
               </div>
             </div>
           </div>
-          <div class="ui eight wide column grid">
-            <div class="ui vertical segment">
+          <div class="eight wide column grid">
+            <div class="vertical segment">
               <p><strong>We Make, We Hack, We Share.</strong></p>
               <p>
                 The Makers' Open Lab for Innovation is a place opening to everyone.<br>
@@ -522,47 +522,15 @@
     <!-- Semantic-UI Library -->
     <script src="semantic/dist/semantic.min.js"></script>
     <!-- Third-party Library -->
+    <script src="node_modules/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
     <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/ui-leaflet/dist/ui-leaflet.min.js"></script>
     <script src="assets/js/ddscrollspy.js "></script>
     <!-- Application bootstrap  -->
     <script src="app/app.module.js"></script>
     <script src="app/moliday/moliday.controller.js"></script>
     <script src="app/moliday/moliday.service.js"></script>
-    <!-- Emebed map with Leaflet & OpenStreetMap -->
-    <script>
-      // initialize the map and maker
-      var map = L.map('map').setView([23.9519631, 120.9274402], 17);
-      var marker = L.marker([23.9519631, 120.9274402]);
-      // load a tile layer
-      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-        {
-          attribution: '地圖資訊 © <a href="http://openstreetmap.org">OpenStreetMap 貢獻者</a> ♥',
-        }).addTo(map);
-      // load marker
-      marker.addTo(map);
-      marker.bindPopup("MOLi 在這裡!").openPopup();
-      // Disable drag and zoom handlers.
-      map.dragging.disable();
-      map.scrollWheelZoom.disable();
-      map.boxZoom.disable();
-      map.keyboard.disable();
-      // Disable tap handler, if present.
-      if (map.tap) map.tap.disable();
-    </script>
-    <script>
-      $('#menu').ddscrollSpy({
-        scrolltopoffset: -40,
-        highlightclass: "active"
-      });
-      $('#scrollMe').ddscrollSpy({
-        scrolltopoffset: -40,
-        highlightclass: "active"
-      });
-      $('.modal.mobile-menu').modal('attach events', '.mobile-menu-button', 'show');
-      $('.icon').popup({
-          inline: true,
-          position: 'top center'
-      });
-    </script>
+    <script src="app/map/map.controller.js"></script>
+
   </body>
 </html>

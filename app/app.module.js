@@ -2,6 +2,10 @@
   'use strict';
 
   angular
-    .module('moli', []);
+    .module('moli', [
+      /* ui-leaflet's library */
+      'nemLogging',
+      'ui-leaflet'
+    ]);
 
 })();
