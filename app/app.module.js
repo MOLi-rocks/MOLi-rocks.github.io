@@ -7,7 +7,9 @@
       'nemLogging',
       'ui-leaflet',
       /* angular-scroll */
-      'duScroll'
+      'duScroll',
+      /* firebase */
+      'firebase'
     ]);
 
 })();

@@ -57,6 +57,20 @@
 
         <div class="ui grid container center aligned">
           <div class="ui vertical segment">
+            <div ng-controller="doorStatusController as vm" ng-show="vm.obj.status">
+              <button class="ui red icon button"  ng-show="vm.obj.status == 1">
+                <i class="minus circle icon"></i>
+                歇息中
+              </button>
+              <button class="ui green icon button" ng-show="vm.obj.status == 0">
+                <i class="checkmark icon"></i>
+                開放中
+              </button>
+              <button class="ui grey icon button" ng-show="vm.obj.status != 1 && vm.obj.status != 2">
+                <i class="warning sign icon"></i>
+                狀態不明
+              </button>
+            </div>
             <h2 id="site-description" class="ui sub header"><i>Makers' Open Lab for Innovation</i></h2>
             <h2 id="site-description" class="ui sub header"><i>We Make, We Hack, We Share.</i></h2>
           </div>
@@ -530,12 +544,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script src="https://cdn.rawgit.com/angular-ui/ui-leaflet/master/dist/ui-leaflet.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
     <!-- Application bootstrap  -->
     <script src="app/app.jquery.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/moliday/moliday.controller.js"></script>
     <script src="app/moliday/moliday.service.js"></script>
     <script src="app/map/map.controller.js"></script>
+    <script src="app/door-status/door-status.controller.js"></script>
 
   </body>
 </html>
