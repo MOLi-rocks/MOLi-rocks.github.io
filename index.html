@@ -57,7 +57,7 @@
 
         <div class="ui grid container center aligned">
           <div class="ui vertical segment">
-            <div ng-controller="doorStatusController as vm" ng-show="vm.obj.status == 1 || vm.obj.status == 0">
+            <div ng-controller="doorStatusController as vm" ng-cloak>
               <button class="ui red icon button"  ng-show="vm.obj.status == 1">
                 <i class="minus circle icon"></i>
                 歇息中
@@ -66,7 +66,7 @@
                 <i class="checkmark icon"></i>
                 開放中
               </button>
-              <button class="ui grey icon button" ng-show="vm.obj.status != 1 && vm.obj.status != 0">
+              <button class="ui grey icon button" ng-show="vm.obj.status != 1 && vm.obj.status != 0 && vm.obj.status != null">
                 <i class="warning sign icon"></i>
                 狀態不明
               </button>
