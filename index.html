@@ -57,7 +57,7 @@
 
         <div class="ui grid container center aligned">
           <div class="ui vertical segment">
-            <div ng-controller="doorStatusController as vm">
+            <div ng-controller="doorStatusController as vm" ng-show="vm.obj.status == 1 || vm.obj.status == 0">
               <button class="ui red icon button"  ng-show="vm.obj.status == 1">
                 <i class="minus circle icon"></i>
                 歇息中
