@@ -353,13 +353,13 @@
         </header>
         <div class="ui grid container stackable">
           <div class="ui six column grid center aligned">
-            <div class="column" ng-repeat="keyholder in vm.keyholders">
+            <div class="column" ng-repeat="keyholder in vm.keyholders track by $index">
               <div class="ui fluid card">
                 <div class="image">
-                  <img ng-src="{{keyholder.avatar_url}}">
+                  <img ng-src="https://avatars.githubusercontent.com/u/{{keyholder.id}}?v=3">
                 </div>
                 <div class="content">
-                  <a class="header" ng-href="{{keyholder.html_url}}" ng-bind="keyholder.name"></a>
+                  <a class="header" ng-href="https://github.com/{{keyholder.username}}" ng-bind="keyholder.name"></a>
                 </div>
               </div>
             </div>

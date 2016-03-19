@@ -10,36 +10,93 @@
   /* @ngInject */
   function KeyholderController($http) {
     var vm = this;
-    vm.keyholders = {
-      sharkssyu: {},
-      BlueT: {},
-      Trustmyself79: {},
-      Bilthe: {},
-      bf98099: {},
-      mirase: {},
-      sunnyworm: {},
-      kenornotes: {},
-      focaaby: {},
-      zxp86021: {},
-      lemon5920: {},
-      passerbyid: {},
-      SerenaLyu: {},
-      x3388638: {},
-      AishaLien: {},
-      SEMI02: {},
-      YiLiangChen: {}
-    };
-
-    angular.forEach(vm.keyholders, function(obj, username) {
-      $http.get('https://api.github.com/users/' + username)
-        .success(function (res) {
-          if (res.name == null) {
-            res.name = '@' + res.login;
-          }
-          vm.keyholders[username] = res;
-        });
-    });
-
+    vm.keyholders = [
+      {
+        "id": 17763380,
+        "name": "ssyu",
+        "username": "sharkssyu"
+      },
+      {
+        "id": 51141,
+        "name": "BlueT",
+        "username": "BlueT"
+      },
+      {
+        "id": 12278455,
+        "name": "乃嘉",
+        "username": "Trustmyself79"
+      },
+      {
+        "id": 13043549,
+        "name": "保保",
+        "username": "Bilthe"
+      },
+      {
+        "id": 13043539,
+        "name": "nhss",
+        "username": "bf98099"
+      },
+      {
+        "id": 12278465,
+        "name": "Mirase",
+        "username": "Mirase"
+      },
+      {
+        "id": 8233294,
+        "name": "和融",
+        "username": "sunnyworm"
+      },
+      {
+        "id": 8233034,
+        "name": "Sky Huang",
+        "username": "kenornotes"
+      },
+      {
+        "id": 8644704,
+        "name": "茂林",
+        "username": "focaaby"
+      },
+      {
+        "id": 3607700,
+        "name": "richegg Tsai",
+        "username": "zxp86021"
+      },
+      {
+        "id": 13966758,
+        "name": "JhanYing",
+        "username": "lemon5920"
+      },
+      {
+        "id": 2075566,
+        "name": "Yuer",
+        "username": "passerbyid"
+      },
+      {
+        "id": 17947325,
+        "name": "煉乳",
+        "username": "SerenaLyu"
+      },
+      {
+        "id": 8147952,
+        "name": "ChaNg Y.y.",
+        "username": "x3388638"
+      },
+      {
+        "id": 14323727,
+        "name": "儷晴",
+        "username": "AishaLien"
+      },
+      {
+        "id": 12278450,
+        "name": "小青",
+        "username": "SEMI02"
+      },
+      {
+        "id": 17447427,
+        "name": "奕良",
+        "username": "YiLiangChen"
+      }
+    ];
   }
 
 })();
