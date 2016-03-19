@@ -342,7 +342,7 @@
 
 
       <div class="ui divider container"></div>
-      <section id="keyholders">
+      <section id="keyholders" ng-controller="KeyholderController as vm">
         <header>
           <div class="ui grid container stackable center aligned">
             <div class="ui vertical segment center aligned">
@@ -351,104 +351,14 @@
           </div>
         </header>
         <div class="ui grid container stackable">
-          <div class="ui seven column grid center aligned">
-            <div class="column">
+          <div class="ui six column grid center aligned">
+            <div class="column" ng-repeat="keyholder in vm.keyholders">
               <div class="ui fluid card">
                 <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+                  <img ng-src="{{keyholder.avatar_url}}">
                 </div>
                 <div class="content">
-                  <a class="header">老俞</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar2/large/elyse.png">
-                </div>
-                <div class="content">
-                  <a class="header">BlueT</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar2/large/kristy.png">
-                </div>
-                <div class="content">
-                  <a class="header">天天</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar/large/daniel.jpg">
-                </div>
-                <div class="content">
-                  <a class="header">Yuer</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar/large/steve.jpg">
-                </div>
-                <div class="content">
-                  <a class="header">茂林</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://www.semantic-ui.com/images/avatar/large/justen.jpg">
-                </div>
-                <div class="content">
-                  <a class="header">nhss</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar/large/veronika.jpg">
-                </div>
-                <div class="content">
-                  <a class="header">乃嘉</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://semantic-ui.com/images/avatar/large/stevie.jpg">
-                </div>
-                <div class="content">
-                  <a class="header">小青</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://www.semantic-ui.com/images/avatar/large/matt.jpg">
-                </div>
-                <div class="content">
-                  <a class="header">展瑩</a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="ui fluid card">
-                <div class="image">
-                  <img src="http://graph.facebook.com/100000407892430/picture?type=large">
-                </div>
-                <div class="content">
-                  <a class="header">蛋蛋</a>
+                  <a class="header" ng-href="{{keyholder.html_url}}" ng-bind="keyholder.name"></a>
                 </div>
               </div>
             </div>
@@ -554,6 +464,7 @@
     <script src="app/moliday/moliday.service.js"></script>
     <script src="app/map/map.controller.js"></script>
     <script src="app/door-status/door-status.controller.js"></script>
+    <script src="app/keyholder/keyholder.controller.js"></script>
 
   </body>
 </html>
