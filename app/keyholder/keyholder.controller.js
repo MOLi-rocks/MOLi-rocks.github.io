@@ -82,11 +82,6 @@
         "username": "x3388638"
       },
       {
-        "id": 14323727,
-        "name": "儷晴",
-        "username": "AishaLien"
-      },
-      {
         "id": 12278450,
         "name": "小青",
         "username": "SEMI02"
