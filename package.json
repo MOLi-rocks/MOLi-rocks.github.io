@@ -20,6 +20,8 @@
     "angular": "^1.4.8",
     "angular-scroll": "^1.0.0",
     "angular-simple-logger": "^0.1.7",
+    "angularfire": "^1.1.4",
+    "firebase": "^2.4.1",
     "jquery": "^2.2.1",
     "leaflet": "^0.7.7",
     "semantic-ui-css": "^2.1.8",
