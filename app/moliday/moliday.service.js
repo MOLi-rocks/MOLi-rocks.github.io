@@ -14,7 +14,7 @@
     ////////////////
 
     function getEvents() {
-      return $http.get('https://moli.rocks:8888')
+      return $http.get('https://moli.rocks/kktix/events.json')
         .then(getEventsComplete)
         .catch(getEventsFailed);
 
