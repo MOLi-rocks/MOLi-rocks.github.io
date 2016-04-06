@@ -37,14 +37,6 @@ section {
   font-size: 17px;
 }
 
-#menu {
-  background-color: rgba(255,255,255,0.75);
-}
-
-#menu.grid>.row {
-  padding: 0;
-}
-
 #mobile-menu a{
   margin: 5% auto;
   padding: 5% auto;

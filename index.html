@@ -20,36 +20,47 @@
   </head>
   <body ng-app="moli" ng-cloak>
     <!-- Menu -->
-    <div id="menu" class="ui secondary pointing invert fixed menu grid">
-      <div class="ui container computer tablet only row">
-        <a href="#banner" class="item" offset="30" du-smooth-scroll du-scrollspy>Home</a>
-        <a href="#intro" class="item" offset="30" du-smooth-scroll du-scrollspy>Intro</a>
-        <a href="#happyhour" class="item" offset="30" du-smooth-scroll du-scrollspy>HappyHour</a>
-        <a href="#event" class="item" offset="30" du-smooth-scroll du-scrollspy>Event</a>
-        <a href="#keyholders" class="item" offset="30" du-smooth-scroll du-scrollspy>Keyholders</a>
-        <a href="#about" class="item" offset="30" du-smooth-scroll du-scrollspy>About</a>
-      </div>
-      <div class="ui container mobile only row" >
-        <span class="item">MOLi－創新自造者開放實驗室</span>
-        <a class="mobile-menu-button right item"><i class="content icon"></i></a>
-      </div>
 
-      <div class="ui basic modal mobile-menu">
-        <div class="ui two column centered grid">
-          <div class="aligned center">
-            <div id="mobile-menu" class="ui massive list">
-              <a href="#banner" class="item close" offset="40" du-smooth-scroll du-scrollspy>Home</a>
-              <a href="#intro" class="item close" offset="40" du-smooth-scroll du-scrollspy>Intro</a>
-              <a href="#happyhour" class="item close" offset="40" du-smooth-scroll du-scrollspy>HappyHour</a>
-              <a href="#event" class="item close" offset="40" du-smooth-scroll du-scrollspy>Event</a>
-              <a href="#keyholders" class="item close" offset="40" du-smooth-scroll du-scrollspy>Keyholders</a>
-              <a href="#about" class="item close" offset="40" du-smooth-scroll du-scrollspy>About</a>
-            </div>
-            <i class="ui close huge icon"></i>
-          </div>
+    <div class="ui top fixed inverted menu">
+      <div class="ui container computer tablet only grid">
+        <div class="brand item">MOLi－創新自造者開放實驗室</div>
+        <div class="right menu">
+          <a href="#banner" class="item" offset="30" du-smooth-scroll du-scrollspy>Home</a>
+          <a href="#intro" class="item" offset="30" du-smooth-scroll du-scrollspy>Intro</a>
+          <a href="#happyhour" class="item" offset="30" du-smooth-scroll du-scrollspy>HappyHour</a>
+          <a href="#event" class="item" offset="30" du-smooth-scroll du-scrollspy>Event</a>
+          <a href="#keyholders" class="item" offset="30" du-smooth-scroll du-scrollspy>Keyholders</a>
+          <a href="#about" class="item" offset="30" du-smooth-scroll du-scrollspy>About</a>
         </div>
       </div>
+
+      <div></div>
+
+      <div id="menu" class="ui container mobile only grid">
+        <div class="brand item">MOLi－創新自造者開放實驗室</div>
+        <a class="mobile-menu-button right item"><i class="content icon"></i></a>
+
+        <div class="ui basic modal mobile-menu">
+          <div class="ui two column centered grid">
+            <div class="aligned center">
+              <div id="mobile-menu" class="ui massive list">
+                <a href="#banner" class="item close" offset="40" du-smooth-scroll du-scrollspy>Home</a>
+                <a href="#intro" class="item close" offset="40" du-smooth-scroll du-scrollspy>Intro</a>
+                <a href="#happyhour" class="item close" offset="40" du-smooth-scroll du-scrollspy>HappyHour</a>
+                <a href="#event" class="item close" offset="40" du-smooth-scroll du-scrollspy>Event</a>
+                <a href="#keyholders" class="item close" offset="40" du-smooth-scroll du-scrollspy>Keyholders</a>
+                <a href="#about" class="item close" offset="40" du-smooth-scroll du-scrollspy>About</a>
+              </div>
+              <i class="ui close huge icon"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+
+
     <div id="banner">
       <header class="hgroup">
         <div class="ui grid container center aligned tablet computer only">
