@@ -11,7 +11,7 @@
     .modal('attach events', '.close', 'hide');
 
   /* popup prompt in "about" section */
-  $('.icon').popup({
+  $('.icon-pop').popup({
     inline: true,
     position: 'top center'
   });
