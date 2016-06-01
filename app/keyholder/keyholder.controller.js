@@ -47,11 +47,6 @@
         "username": "sunnyworm"
       },
       {
-        "id": 8233034,
-        "name": "Sky Huang",
-        "username": "kenornotes"
-      },
-      {
         "id": 8644704,
         "name": "茂林",
         "username": "focaaby"
