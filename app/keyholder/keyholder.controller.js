@@ -47,11 +47,6 @@
         "username": "sunnyworm"
       },
       {
-        "id": 8644704,
-        "name": "茂林",
-        "username": "focaaby"
-      },
-      {
         "id": 3607700,
         "name": "richegg Tsai",
         "username": "zxp86021"
@@ -90,4 +85,3 @@
   }
 
 })();
-
