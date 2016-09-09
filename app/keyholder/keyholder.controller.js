@@ -37,11 +37,6 @@
         "username": "bf98099"
       },
       {
-        "id": 12278465,
-        "name": "Mirase",
-        "username": "Mirase"
-      },
-      {
         "id": 8233294,
         "name": "和融",
         "username": "sunnyworm"
@@ -60,11 +55,6 @@
         "id": 2075566,
         "name": "Yuer",
         "username": "passerbyid"
-      },
-      {
-        "id": 17947325,
-        "name": "煉乳",
-        "username": "SerenaLyu"
       },
       {
         "id": 8147952,
