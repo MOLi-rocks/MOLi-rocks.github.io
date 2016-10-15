@@ -39,9 +39,9 @@
 
         // Default settings
         defaults: {
-          tileLayer: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          tileLayer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
           tileLayerOptions: {
-            attribution: '地圖資訊 © <a href="http://openstreetmap.org">OpenStreetMap 貢獻者</a> ♥',
+            attribution: '地圖資訊 © <a href="https://openstreetmap.org">OpenStreetMap 貢獻者</a> ♥',
             // for font size readability
             detectRetina: false,
             reuseTiles: true
