@@ -53,11 +53,11 @@
 
   &-more {
     font-size: 1.3rem;
+    &-after {
+      content: " »"
+    }
   }
 
-  &-more:after {
-    content: " »"
-  }
 }
 
 @include media-breakpoint-up(sm) {}
@@ -94,6 +94,11 @@
   }
 
 }
+
+/*
+ * Contact Information
+ */
+
 #map { height: 20rem; }
 
 .contact-list {
