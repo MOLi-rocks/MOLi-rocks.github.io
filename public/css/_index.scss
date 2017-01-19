@@ -70,6 +70,30 @@
 }
 @include media-breakpoint-up(lg) {}
 @include media-breakpoint-up(xl) {}
+
+/*
+ * Door Status
+ */
+
+.door {
+  @extend .btn;
+  &-loading {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  }
+
+  &-open {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+  }
+
+  &-close {
+    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+  }
+
+  &-error {
+    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+  }
+
+}
 #map { height: 20rem; }
 
 .contact-list {

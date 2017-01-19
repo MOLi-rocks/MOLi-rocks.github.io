@@ -6,7 +6,7 @@
     <h1 class="brand-title">創新自造者開放實驗室</h1>
     <p class="brand-subtitle">Makers' Open Lab for Innovation</p>
     <!--開關門狀態-->
-    <p><a class="door btn btn-secondary" href="#" role="button">開門中</a></p>
+    <p class="door door-loading text-center">偵測開門狀態...</p>
   </div>
 </section>
 
@@ -73,12 +73,38 @@
         <li class="contact-list-item"><i class="fa fa-telegram" aria-hidden="true"></i> <a href="https://t.me/MOLi_rocks" target="_blank">Telegram 聊天群組</a></li>
         <li class="contact-list-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> 54561 南投縣埔里鎮大學路470號管理學院237室</li>
       </ul>
+      <p class="door door-loading text-center">偵測開門狀態...</p>
     </div>
   </div>
 
   <hr class="divider">
 
 </div>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBgTlUBcXa3B2VXpsY_Iyh1HVRNyiJpKMo",
+    authDomain: "moli-door.firebaseapp.com",
+    databaseURL: "https://moli-door.firebaseio.com",
+    storageBucket: "moli-door.appspot.com",
+    messagingSenderId: "10676976194"
+  };
+  firebase.initializeApp(config);
+
+  var doorStatusRef = firebase.database().ref('status');
+  doorStatusRef.on('value', function(snapshot) {
+    var doorStatus = snapshot.val();
+    if (doorStatus === 0) {
+      $('.door').html('開放中').removeClass( "door-loading door-close door-error" ).addClass( "door-open" );
+    } else if (doorStatus === 1) {
+      $('.door').html('休息中').removeClass( "door-loading door-open door-error" ).addClass( "door-close" );
+    } else {
+      $('.door').html('狀態不明<br>猴子們正在努力找出問題').removeClass( "door-loading door-open door-close" ).addClass( "door-error" );
+    }
+  });
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.js"></script>
 <script>
   var map = L.map('map', {
