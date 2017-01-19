@@ -17,5 +17,9 @@
   },
   "homepage": "https://github.com/MOLi-rocks/MOLi-rocks.github.io#readme",
   "dependencies": {
+  },
+  "devDependencies": {
+    "harp": "^0.23.0",
+    "bootstrap": "^4.0.0-alpha.6"
   }
 }
