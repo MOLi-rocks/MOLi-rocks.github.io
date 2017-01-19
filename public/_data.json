@@ -1,0 +1,28 @@
+{
+  "nav": [
+    {
+      "title": "Home",
+      "link": "index"
+    },
+    {
+      "title": "Make",
+      "link": "make"
+    },
+    {
+      "title": "Open",
+      "link": "open"
+    },
+    {
+      "title": "Share",
+      "link": "share"
+    },
+    {
+      "title": "Blog",
+      "link": "https://blog.moli.rocks"
+    },
+    {
+      "title": "Docs",
+      "link": "5"
+    }
+  ]
+}
