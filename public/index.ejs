@@ -58,4 +58,35 @@
 
   <hr class="divider">
 
+  <div class="feature row">
+    <div class="col-md-7">
+      <div id="map"></div>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i> 使用 <a href="http://osm.org/go/5iarqEyaW?layers=ND&node=3680840001" target="_blank">OpenStreetMap</a> 或 <a href="https://www.google.com/maps?cid=13455914928326177954" target="_blank">Google Map</a> 檢視
+    </div>
+
+  <hr class="divider">
+
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.js"></script>
+<script>
+  var map = L.map('map', {
+      center: [23.9519631, 120.9274402],
+      zoom: 17,
+      touchZoom: true,
+      doubleClickZoom: true,
+      dragging: false,
+      scrollWheelZoom: false,
+      boxZoom: false,
+      keyboard: false,
+      tap: false
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution: '地圖資訊 © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap 貢獻者</a> ♥',
+    // maxZoom: 18,
+    // detectRetina: true
+  }).addTo(map);
+
+  var marker = L.marker([23.9519631, 120.9274402]).addTo(map);
+  // marker.bindPopup('MOLi 在這！').openPopup();
+</script>
