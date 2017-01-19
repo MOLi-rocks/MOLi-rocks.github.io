@@ -108,3 +108,13 @@
     margin: 0.3rem 0;
   }
 }
+
+/*
+ * Footer
+ */
+
+.back-to-top:before {
+  font-family: FontAwesome;
+  content: "\f0aa";
+  padding-right: 0.2rem;
+}
