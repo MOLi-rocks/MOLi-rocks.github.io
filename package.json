@@ -1,10 +1,10 @@
 {
   "name": "moli-rocks",
-  "version": "1.0.0",
   "description": "MOLi's website.",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "harp compile . dist"
   },
   "repository": {
     "type": "git",
@@ -17,14 +17,5 @@
   },
   "homepage": "https://github.com/MOLi-rocks/MOLi-rocks.github.io#readme",
   "dependencies": {
-    "angular": "1.5.7",
-    "angular-scroll": "1.0.0",
-    "angular-simple-logger": "0.1.7",
-    "angularfire": "1.2.0",
-    "firebase": "2.4.2",
-    "jquery": "3.1.0",
-    "leaflet": "0.7.7",
-    "semantic-ui-css": "2.2.2",
-    "ui-leaflet": "1.0.1"
   }
 }
