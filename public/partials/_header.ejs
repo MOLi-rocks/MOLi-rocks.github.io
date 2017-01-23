@@ -5,9 +5,9 @@
   <a class="navbar-brand" href="index">MOLi</a>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <% for (var index = 0; index < public._data.nav.length; index++) { %>
-        <li class="nav-item <%- current.source == public._data.nav[index].link ? 'active' : '' %>">
-          <a class="nav-link" href="<%= public._data.nav[index].link %>"><%= public._data.nav[index].title %> <span class="sr-only">(current)</span></a>
+      <% for (var index = 0; index < nav.length; index++) { %>
+        <li class="nav-item <%- current.source == nav[index].link ? 'active' : '' %>">
+          <a class="nav-link" href="<%= nav[index].link %>"><%= nav[index].title %> <span class="sr-only">(current)</span></a>
         </li>
       <% } %>
     </ul>
