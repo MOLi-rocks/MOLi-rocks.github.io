@@ -1,0 +1,16 @@
+/*
+ * Event
+ */
+.latest-event {
+  display: none;
+  &-date:before {
+    font-family: FontAwesome;
+    content: "\f073";
+    margin-right: 0.3rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
