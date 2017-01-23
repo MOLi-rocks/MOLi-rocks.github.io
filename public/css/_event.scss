@@ -2,7 +2,9 @@
  * Event
  */
 .latest-event {
-  display: none;
+  &-display {
+    display: none;
+  }
   &-date:before {
     font-family: FontAwesome;
     content: "\f073";

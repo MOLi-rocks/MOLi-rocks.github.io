@@ -17,7 +17,7 @@ function setLatestEvent() {
         $('.latest-event-date').html(latestEvent.dateString);
         $('.latest-event-summary').html(latestEvent.summary);
         $('.latest-event-link').attr('href', latestEvent.url);
-        $('.latest-event').show();
+        $('.latest-event-display').show();
       }
     })
     .fail(function(err) {
