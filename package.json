@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/MOLi-rocks/MOLi-rocks.github.io.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "MOLi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MOLi-rocks/MOLi-rocks.github.io/issues"
   },
