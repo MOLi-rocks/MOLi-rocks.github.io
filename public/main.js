@@ -41,7 +41,9 @@ function getNewEvents() {
     // 過濾出未發生之活動
     events.forEach(function(event){
       var date = new Date(event.published);
-      if ( date.getTime() >= new Date() ) {
+      // 先故意顯示
+      // if ( date.getTime() >= new Date() ) {
+      if ( date.getTime() < new Date() ) {
         // 格式化活動時間
         event.dateString = getLocaleDateString( new Date(event.published) );
         newEvents.push(event);
