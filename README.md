@@ -12,7 +12,7 @@ $ npm install && npm run build
 
 ## Contribute 
 ```
-$ npm install && harp server
+$ npm install && npm run serve
 ```
 
 ## License

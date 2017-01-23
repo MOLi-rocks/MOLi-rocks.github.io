@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "build": "harp compile . dist"
+    "build": "node_modules/harp/bin/harp compile . dist",
+    "serve": "node_modules/harp/bin/harp server"
   },
   "repository": {
     "type": "git",
