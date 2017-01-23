@@ -60,11 +60,11 @@ function getNewEvents() {
 function setDoorStatus() {
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBgTlUBcXa3B2VXpsY_Iyh1HVRNyiJpKMo",
-    authDomain: "moli-door.firebaseapp.com",
-    databaseURL: "https://moli-door.firebaseio.com",
-    storageBucket: "moli-door.appspot.com",
-    messagingSenderId: "10676976194"
+    apiKey: 'AIzaSyBgTlUBcXa3B2VXpsY_Iyh1HVRNyiJpKMo',
+    authDomain: 'moli-door.firebaseapp.com',
+    databaseURL: 'https://moli-door.firebaseio.com',
+    storageBucket: 'moli-door.appspot.com',
+    messagingSenderId: '10676976194'
   };
   firebase.initializeApp(config);
 
@@ -73,11 +73,11 @@ function setDoorStatus() {
   doorStatusRef.on('value', function(snapshot) {
     var doorStatus = snapshot.val();
     if (doorStatus === 0) {
-      $('.door').html('開放中').removeClass( "door-loading door-close door-error" ).addClass( "door-open" );
+      $('.door').html('開放中').removeClass('door-loading door-close door-error').addClass('door-open');
     } else if (doorStatus === 1) {
-      $('.door').html('休息中').removeClass( "door-loading door-open door-error" ).addClass( "door-close" );
+      $('.door').html('休息中').removeClass('door-loading door-open door-error').addClass('door-close');
     } else {
-      $('.door').html('狀態不明<br>猴子們正在努力找出問題').removeClass( "door-loading door-open door-close" ).addClass( "door-error" );
+      $('.door').html('狀態不明<br>猴子們正在努力找出問題').removeClass( 'door-loading door-open door-close' ).addClass( 'door-error' );
     }
   });
 }
@@ -101,7 +101,7 @@ function setMap() {
   });
 
   // 設定 map 圖資
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '地圖資訊 © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap 貢獻者</a> ♥'
     // detectRetina: true
   }).addTo(map);
