@@ -1,0 +1,18 @@
+/*
+ * Contact Information
+ */
+
+#map { height: 20rem; }
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  &-item {
+    margin: 0.3rem 0;
+  }
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

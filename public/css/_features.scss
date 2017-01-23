@@ -1,0 +1,48 @@
+/*
+ * Features
+ */
+
+.divider {
+  margin: 3rem 0;
+}
+
+.feature {
+  &-title {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+
+  &-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  &-content {
+    margin-top: 2rem;
+  }
+
+  &-more {
+    font-size: 1.3rem;
+    &:hover {
+      text-decoration: none;
+    }
+    &:after {
+      font-family: FontAwesome;
+      content: "\f105";
+      margin-left: 0.5rem;
+    }
+  }
+
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {
+  .feature {
+    &-content {
+      margin-top: 1rem;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

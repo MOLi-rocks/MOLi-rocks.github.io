@@ -1,0 +1,28 @@
+/*
+ * Brand
+ */
+
+.brand {
+  &-title {
+    font-size: 1.5rem;
+  }
+  &-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
+
+
+@include media-breakpoint-up(sm) {
+  .brand {
+    &-title {
+      font-size: 2rem;
+    }
+    &-subtitle {
+      font-size: 1.5rem;
+    }
+  }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

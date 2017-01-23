@@ -1,0 +1,42 @@
+/*
+ * Door Status
+ */
+
+.door {
+  @extend .btn;
+  &-loading {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+  }
+
+  &-open {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    &:before {
+      font-family: FontAwesome;
+      content: "\f185";
+      padding-right: 0.2rem;
+    }
+  }
+
+  &-close {
+    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+    &:before {
+      font-family: FontAwesome;
+      content: "\f186";
+      padding-right: 0.2rem;
+    }
+  }
+
+  &-error {
+    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    &:before {
+      font-family: FontAwesome;
+      content: "\f071";
+      padding-right: 0.2rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

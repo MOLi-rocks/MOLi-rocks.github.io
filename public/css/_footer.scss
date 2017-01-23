@@ -1,0 +1,14 @@
+/*
+ * Footer
+ */
+
+.back-to-top:before {
+  font-family: FontAwesome;
+  content: "\f0aa";
+  padding-right: 0.2rem;
+}
+
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
