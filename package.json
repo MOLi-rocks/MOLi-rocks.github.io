@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "build": "node_modules/harp/bin/harp compile . dist",
     "serve": "node_modules/harp/bin/harp server"
   },
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/MOLi-rocks/MOLi-rocks.github.io#readme",
   "dependencies": {
+    "github-webhook-handler": "^0.6.0"
   },
   "devDependencies": {
     "harp": "^0.23.0",
