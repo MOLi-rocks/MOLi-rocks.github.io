@@ -1,7 +1,7 @@
 require('./env.js');
 var http = require('http');
 var createHandler = require('github-webhook-handler');
-var handler = createHandler({ path: '/webhook', secret: proces.env.SERCERT_KEY });
+var handler = createHandler({ path: '/webhook', secret: process.env.SERCERT_KEY });
 
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
