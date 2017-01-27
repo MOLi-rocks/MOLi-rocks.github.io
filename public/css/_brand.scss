@@ -2,7 +2,32 @@
  * Brand
  */
 
+.header {
+  margin-top: -.3rem;
+  padding: 4.5rem 0 4rem 0;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/header-cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(2px) opacity(.5);
+    transform: scale(1.03);
+  }
+}
+
 .brand {
+  color: #000000;
   &-title {
     font-size: 1.5rem;
   }
