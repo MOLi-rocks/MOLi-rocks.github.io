@@ -1,4 +1,5 @@
 env.js
+public/src/env.js
 dist/
 node_modules/
 

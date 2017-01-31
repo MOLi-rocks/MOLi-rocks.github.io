@@ -15,11 +15,11 @@ function setLatestEvent() {
       if (events.length > 0) {
         var latestEvent = events[0];
 
-        $('.latest-event-title').html(latestEvent.title);
-        $('.latest-event-date').html(latestEvent.dateString);
-        $('.latest-event-summary').html(latestEvent.summary);
-        $('.latest-event-link').attr('href', latestEvent.url);
-        $('.latest-event-display').show();
+        $('.event-title').html(latestEvent.title);
+        $('.event-date').html(latestEvent.dateString);
+        $('.event-summary').html(latestEvent.summary);
+        $('.event-link').attr('href', latestEvent.url);
+        $('.event-display').show();
       }
     })
     .fail(function(err) {

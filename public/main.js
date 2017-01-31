@@ -1,19 +1,17 @@
 'use strict';
 
 /*
-** 取得如「2017/01/05（週四） 18:10」格式的時間字串
+** 取得格式化時間字串
 */
-function getLocaleDateString(date) {
-  var options = {
-    hour12: false,
-    weekday: 'short',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit'
-  };
-  return date.toLocaleString('zh-TW', options);
+function getDateString(date = null) {
+  var m;
+  if (date === null) {
+    m = moment();
+  } else {
+    m = moment(date);
+  }
+
+  return m.format('YYYY/MM/DD（dddd） HH:mm');;
 }
 
 /*
@@ -43,9 +41,9 @@ function getNewEvents() {
       var date = new Date(event.published);
       // 先故意顯示
       // if ( date.getTime() >= new Date() ) {
-      if ( date.getTime() < new Date() ) {
+      if ( date.getTime() >= new Date('2016/12/27')) {
         // 格式化活動時間
-        event.dateString = getLocaleDateString( new Date(event.published) );
+        event.dateString = getDateString( new Date(event.published) );
         newEvents.push(event);
       }
     });

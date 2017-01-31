@@ -1,0 +1,31 @@
+/*
+ * Calendar
+ */
+
+.fc-time {
+	// 隱藏行事曆的時間
+	display: none;
+}
+
+#calendar {
+	> .fc-toolbar {
+		h2 {
+			font-size: 1.5rem;
+			margin: 1rem 0.5rem 0 0.5rem;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	#calendar {
+	  > .fc-toolbar {
+			h2 {
+				font-size: 2rem;
+				margin: 0;
+			}
+		}
+	}
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

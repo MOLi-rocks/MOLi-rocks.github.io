@@ -7,3 +7,11 @@ body {
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
+
+.external-link {
+	&:after {
+		font-family: FontAwesome;
+		content: "\f08e";
+		margin-left: 0.3rem;
+	}
+}
