@@ -1,20 +1,6 @@
 'use strict';
 
 /*
-** 取得格式化時間字串
-*/
-function getDateString(date = null) {
-  var m;
-  if (date === null) {
-    m = moment();
-  } else {
-    m = moment(date);
-  }
-
-  return m.format('YYYY/MM/DD（dddd） HH:mm');;
-}
-
-/*
 ** 取得活動資訊
 */
 function getEvents() {
@@ -38,12 +24,12 @@ function getNewEvents() {
 
     // 過濾出未發生之活動
     events.forEach(function(event){
-      var date = new Date(event.published);
+      var eventDate = moment(event.published);
       // 先故意顯示
-      // if ( date.getTime() >= new Date() ) {
-      if ( date.getTime() >= new Date('2016/12/27')) {
+      // if ( eventDate.isAfter( moment() ) {
+      if ( eventDate.isAfter( moment('2016-12-27') ) ) {
         // 格式化活動時間
-        event.dateString = getDateString( new Date(event.published) );
+        event.dateString = eventDate.format('YYYY/MM/DD（dddd） HH:mm');
         newEvents.push(event);
       }
     });

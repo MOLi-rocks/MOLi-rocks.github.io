@@ -37,10 +37,13 @@ function setCalendar() {
 */
 function setEventModal(event = null) {
   var dateString;
+
   if (event.allDay) {
-    dateString = moment(event.start).format('YYYY/MM/DD') + ' 全天';
+    dateString = event.start.format('YYYY/MM/DD') + ' 全天';
+  } else if ( event.start.isSame(event.end, 'day') ) {
+    dateString = event.start.format('YYYY/MM/DD（dddd） HH:mm') + '~' + event.end.format('HH:mm');
   } else {
-    dateString = getDateString(event.start) + '~' +  getDateString(event.end);
+    dateString = event.start.format('YYYY/MM/DD（dddd） HH:mm') + '~' + event.end.format('MM/DD（dddd） HH:mm');
   }
 
   $('.event-modal-title').html(event.title);
