@@ -3,19 +3,19 @@
     "nav": [
       {
         "title": "Home",
-        "link": "index.html"
+        "link": "index"
       },
       {
         "title": "Make",
-        "link": "make.html"
+        "link": "make"
       },
       {
         "title": "Open",
-        "link": "open.html"
+        "link": "open"
       },
       {
         "title": "Share",
-        "link": "share.html"
+        "link": "share"
       },
       {
         "title": "Blog",
