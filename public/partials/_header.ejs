@@ -6,8 +6,9 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <% for (var index = 0; index < nav.length; index++) { %>
-        <li class="nav-item <%- current.path[0]  == nav[index].link ? 'active' : '' %>">
-          <a class="nav-link" href="<%= nav[index].link %>.html"><%= nav[index].title %> <span class="sr-only">(current)</span></a>
+        <li class="nav-item <%- current.path[0] == nav[index].link ? 'active' : '' %>">
+          <a class="nav-link" href="<%= nav[index].link %><%= nav[index].link.split(":")[0] == 'http' || nav[index].link.split(":")[0] == 'https' ? '' : '.html' %>">
+            <%= nav[index].title %> <span class="sr-only">(current)</span></a>
         </li>
       <% } %>
     </ul>
