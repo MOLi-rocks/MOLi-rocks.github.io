@@ -61,7 +61,7 @@ function setNewEvents() {
       if (events.length > 0) {
         events.forEach(function(event){
           $('.event-list').append('\
-            <div class="col-md-4">\
+            <div class="col-md-6 col-lg-4">\
               <div class="card">\
                 <div class="card-block">\
                   <h4 class="event-title card-title">' + event.title + '</h4>\
