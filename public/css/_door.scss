@@ -10,7 +10,7 @@
 
   &-open {
     @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
-    &:before {
+    &::before {
       font-family: FontAwesome;
       content: "\f185";
       padding-right: 0.2rem;
@@ -19,7 +19,7 @@
 
   &-close {
     @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
-    &:before {
+    &::before {
       font-family: FontAwesome;
       content: "\f186";
       padding-right: 0.2rem;
@@ -28,7 +28,7 @@
 
   &-error {
     @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-    &:before {
+    &::before {
       font-family: FontAwesome;
       content: "\f071";
       padding-right: 0.2rem;

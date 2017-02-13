@@ -27,7 +27,7 @@
     &:hover {
       text-decoration: none;
     }
-    &:after {
+    &::after {
       font-family: FontAwesome;
       content: "\f105";
       margin-left: 0.5rem;

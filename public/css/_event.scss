@@ -13,7 +13,7 @@
 }
 
 .event-modal {
-  &-date:before {
+  &-date::before {
     @extend .event-date:before;
   }
 }

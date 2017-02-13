@@ -9,7 +9,7 @@ body {
 }
 
 .external-link {
-	&:after {
+	&::after {
 		font-family: FontAwesome;
 		content: "\f08e";
 		margin-left: 0.3rem;
