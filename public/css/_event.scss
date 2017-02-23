@@ -10,6 +10,41 @@
     content: "\f073";
     margin-right: 0.3rem;
   }
+  .card {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &-link {
+      color: #0275d8;
+    }
+    &:hover {
+      border-color: #f3f3f3;
+      background: #f3f3f3;
+    }
+    &-label {
+      width: 100px;
+      position: relative;
+      top: 10px;
+      left: -11px;
+      z-index: 2;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      &::after {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-left-color: #d9534f;
+        border-width: 15px;
+        margin-top: -15px;
+      }
+    }
+  }
 }
 
 .event-modal {
