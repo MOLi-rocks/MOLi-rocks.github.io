@@ -4,7 +4,7 @@
 ** 取得活動資訊
 */
 function getEvents() {
-  return $.ajax('https://moli.rocks/kktix/events.json', {
+  return $.ajax('https://moli.kktix.cc/events.json', {
     method: 'GET'
   }).then(function(data){
     return data.entry;
