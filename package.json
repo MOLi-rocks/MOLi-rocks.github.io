@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/MOLi-rocks/MOLi-rocks.github.io#readme",
   "dependencies": {
-    "github-webhook-handler": "^0.6.0"
+    "github-webhook-handler": "^0.7.1"
   },
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.6",
