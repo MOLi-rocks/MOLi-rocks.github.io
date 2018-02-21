@@ -42,21 +42,6 @@
         "username": "sunnyworm"
       },
       {
-        "id": 3607700,
-        "name": "richegg Tsai",
-        "username": "zxp86021"
-      },
-      {
-        "id": 13966758,
-        "name": "JhanYing",
-        "username": "lemon5920"
-      },
-      {
-        "id": 2075566,
-        "name": "Yuer",
-        "username": "passerbyid"
-      },
-      {
         "id": 8147952,
         "name": "ChaNg Y.y.",
         "username": "x3388638"
