@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MOLi-rocks/MOLi-rocks.github.io#readme",
   "dependencies": {
-    "angular": "1.5.7",
+    "angular": "1.6.0",
     "angular-scroll": "1.0.0",
     "angular-simple-logger": "0.1.7",
     "angularfire": "1.2.0",
