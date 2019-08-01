@@ -22,7 +22,7 @@
     "angular-simple-logger": "0.1.7",
     "angularfire": "1.2.0",
     "firebase": "2.4.2",
-    "jquery": "3.1.0",
+    "jquery": "^3.4.1",
     "leaflet": "0.7.7",
     "semantic-ui-css": "2.2.2",
     "ui-leaflet": "1.0.1"
